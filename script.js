@@ -6,9 +6,9 @@ $.fn.upform = function() {
     $(container).find(".input-block").first().click();
   });
 
-  $($this).find("form").submit(function() {
-    return false;
-  });
+  // $($this).find("form").submit(function(data) {
+  //   console.log(data)
+  // });
 
   $(container)
     .find(".input-block")
@@ -79,9 +79,9 @@ $.fn.upform = function() {
     $(container).find(".input-block").first().click();
   });
 
-  $($this).find("form").submit(function() {
-    return false;
-  });
+  // $($this).find("form").submit(function() {
+  //   return false;
+  // });
 
   $(container)
     .find(".input-block")
