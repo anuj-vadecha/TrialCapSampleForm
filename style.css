@@ -41,7 +41,9 @@ h1 {
   font-weight: 400;
 }
 .range {
-  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
   height: 15px;
   -webkit-appearance: none;
   background: #111;
