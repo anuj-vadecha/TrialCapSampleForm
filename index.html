@@ -20,7 +20,7 @@
         <h1 >Trial Cap Algo </h1>
         <p>Please fill this form for us to understand the requirements. Please click on I understand to start filling the form</p>
          <div class="input-control">
-            <input id="toggle-on-q1" class="toggle toggle-left" name="q1" value="yes" type="radio">
+            <input id="toggle-on-q1" class="toggle toggle-left" name="T&C" value="yes" type="radio">
             <label for="toggle-on-q1" class="btn"><span>A</span> I understand</label>
          </div>
       </div>
@@ -28,7 +28,7 @@
       <div class="input-block">
         <div class="label">What is your name?</div>
         <div class="input-control">
-          <input type="text" class="required" autocomplete="off">
+          <input name="name" type="text" class="required" autocomplete="off">
         </div>
       </div>
       <div class="input-block">
@@ -58,8 +58,7 @@
             <input  class="toggle" hidden  name="trial_design" id="retrospective" type="checkbox" ><label for="retrospective" class="btn"><span>13</span>retrospective</label>
             <input  class="toggle" hidden  name="trial_design" id="sequential" type="checkbox" ><label for="sequential" class="btn"><span>14</span>sequential</label>
             <input  class="toggle" hidden  name="trial_design" id="single-blind" type="checkbox" ><label for="single-blind" class="btn"><span>15</span>single-blind</label>
-
-              </div>
+          </div>
       </div>
 
       <div class="input-block">
@@ -74,7 +73,7 @@
         <div class="label">Q3. Number of arms</div>
         <div class="input-control">
         <div id="rangeValue">0</div>
-        <input type="range" min="1" max="1000" value="1" class="slider" id="myRange" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+        <input name="number of arms" type="range" min="1" max="1000" value="1" class="slider" id="myRange" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
          </div>
       </div>
 
