@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - jQuery  TypeForm Clone</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>UpForm</title><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="upform">
+  <form>
+
+    <div class="upform-header"></div>
+
+    <div class="upform-main">
+        <div class="input-block">
+        <h1 >Trial Cap Algo </h1>
+        <p>Please fill this form for us to understand the requirements. Please click on I understand to start filling the form</p>
+         <div class="input-control">
+            <input id="toggle-on-q1" class="toggle toggle-left" name="q1" value="yes" type="radio">
+            <label for="toggle-on-q1" class="btn"><span>A</span> I understand</label>
+         </div>
+      </div>
+
+      <div class="input-block">
+        <div class="label">What is your name?</div>
+        <div class="input-control">
+          <input type="text" class="required" autocomplete="off">
+        </div>
+      </div>
+      <div class="input-block">
+      <div class="label"><span class="questionlabel" id="questionlabel" >&nbsp;Q1.&nbsp;</span>Phase (Select multiple)</div>
+        <div class="input-control">
+          <input  class="toggle" hidden  name="phase" id="phase1" type="checkbox" ><label for="phase1" class="btn"><span>A</span> Phase 1</label>
+          <input  class="toggle " hidden name="phase" id="phase2" type="checkbox"><label for="phase2" class="btn"><span>B</span> Phase 2</label>
+        </div>
+      </div>
+
+      <div class="input-block">
+        <div class="label">Q2. Trial Design</div>
+        <div class="input-control">
+            <input  class="toggle" hidden  name="trial_design" id="case control" type="checkbox" ><label for="case control" class="btn"><span>0</span>case control</label>
+            <input  class="toggle" hidden  name="trial_design" id="cohort" type="checkbox" ><label for="cohort" class="btn"><span>1</span>cohort</label>
+            <input  class="toggle" hidden  name="trial_design" id="cross-sectional" type="checkbox" ><label for="cross-sectional" class="btn"><span>2</span>cross-sectional</label>
+            <input  class="toggle" hidden  name="trial_design" id="crossover" type="checkbox" ><label for="crossover" class="btn"><span>3</span>crossover</label>
+            <input  class="toggle" hidden  name="trial_design" id="double-blind" type="checkbox" ><label for="double-blind" class="btn"><span>4</span>double-blind</label>
+            <input  class="toggle" hidden  name="trial_design" id="epidemiological" type="checkbox" ><label for="epidemiological" class="btn"><span>5</span>epidemiological</label>
+            <input  class="toggle" hidden  name="trial_design" id="multicentre" type="checkbox" ><label for="multicentre" class="btn"><span>6</span>multicentre</label>
+            <input  class="toggle" hidden  name="trial_design" id="observational" type="checkbox" ><label for="observational" class="btn"><span>7</span>observational</label>
+            <input  class="toggle" hidden  name="trial_design" id="open" type="checkbox" ><label for="open" class="btn"><span>8</span>open</label>
+            <input  class="toggle" hidden  name="trial_design" id="parallel" type="checkbox" ><label for="parallel" class="btn"><span>9</span>parallel</label>
+            <input  class="toggle" hidden  name="trial_design" id="postmarketing surveillance" type="checkbox" ><label for="postmarketing surveillance" class="btn"><span>10</span>postmarketing surveillance</label>
+            <input  class="toggle" hidden  name="trial_design" id="prospective" type="checkbox" ><label for="prospective" class="btn"><span>11</span>prospective</label>
+            <input  class="toggle" hidden  name="trial_design" id="randomised" type="checkbox" ><label for="randomised" class="btn"><span>12</span>randomised</label>
+            <input  class="toggle" hidden  name="trial_design" id="retrospective" type="checkbox" ><label for="retrospective" class="btn"><span>13</span>retrospective</label>
+            <input  class="toggle" hidden  name="trial_design" id="sequential" type="checkbox" ><label for="sequential" class="btn"><span>14</span>sequential</label>
+            <input  class="toggle" hidden  name="trial_design" id="single-blind" type="checkbox" ><label for="single-blind" class="btn"><span>15</span>single-blind</label>
+
+              </div>
+      </div>
+
+      <div class="input-block">
+        <div class="label">Q3. Age</div>
+        <div class="input-control">
+        <input  class="toggle" hidden  name="age" id="adult" type="checkbox" ><label for="adult" class="btn"><span>1</span>Adult</label>
+        <input  class="toggle" hidden  name="age" id="children" type="checkbox" ><label for="children" class="btn"><span>2</span>Children</label>
+         </div>
+      </div>
+
+      <div class="input-block">
+        <div class="label">Q3. Number of arms</div>
+        <div class="input-control">
+        <div id="rangeValue">0</div>
+        <input class="range" type="range" name ="" value="0" min="0" max="1000" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+
+            <!--        <input  class="toggle" hidden  name="age" id="adult" type="checkbox" ><label for="adult" class="btn"><span>1</span>Adult</label>-->
+         </div>
+      </div>
+
+      <div class="input-block">
+        <div class="label">Q3. Placebo</div>
+        <div class="input-control">
+        <input  class="toggle" hidden  name="placebo" id="placebo" type="checkbox" ><label for="placebo" class="btn"><span>1</span>placebo</label>
+        <input  class="toggle" hidden  name="placebo" id="comparative" type="checkbox" ><label for="comparative" class="btn"><span>2</span>comparative</label>
+         </div>
+      </div>
+          <div class="input-block">
+        <div class="label">Q3. Indications</div>
+        <div class="input-control">
+            <div style="height:500px;width:100%;overflow:auto;scrollbar-base-color:gold;padding:10px;">
+                       <input  class="toggle" hidden  name="Indications" id="Anaesthesia" type="checkbox" ><label for="Anaesthesia" class="btn"><span>0</span>Anaesthesia</label>
+                <input  class="toggle" hidden  name="Indications" id="Behaviour and behaviour mechanisms" type="checkbox" ><label for="Behaviour and behaviour mechanisms" class="btn"><span>1</span>Behaviour and behaviour mechanisms</label>
+                <input  class="toggle" hidden  name="Indications" id="Benign tumours" type="checkbox" ><label for="Benign tumours" class="btn"><span>2</span>Benign tumours</label>
+                <input  class="toggle" hidden  name="Indications" id="Biliary cancer" type="checkbox" ><label for="Biliary cancer" class="btn"><span>3</span>Biliary cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Bone cancer" type="checkbox" ><label for="Bone cancer" class="btn"><span>4</span>Bone cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Breast cancer" type="checkbox" ><label for="Breast cancer" class="btn"><span>5</span>Breast cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="CNS cancer" type="checkbox" ><label for="CNS cancer" class="btn"><span>6</span>CNS cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Cancer metastases" type="checkbox" ><label for="Cancer metastases" class="btn"><span>7</span>Cancer metastases</label>
+                <input  class="toggle" hidden  name="Indications" id="Cardiovascular disorders" type="checkbox" ><label for="Cardiovascular disorders" class="btn"><span>8</span>Cardiovascular disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Colorectal cancer" type="checkbox" ><label for="Colorectal cancer" class="btn"><span>9</span>Colorectal cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Congenital disorders" type="checkbox" ><label for="Congenital disorders" class="btn"><span>10</span>Congenital disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Connective and soft tissue neoplasms" type="checkbox" ><label for="Connective and soft tissue neoplasms" class="btn"><span>11</span>Connective and soft tissue neoplasms</label>
+                <input  class="toggle" hidden  name="Indications" id="Connective tissue disorders" type="checkbox" ><label for="Connective tissue disorders" class="btn"><span>12</span>Connective tissue disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Connective tissue neoplasms" type="checkbox" ><label for="Connective tissue neoplasms" class="btn"><span>13</span>Connective tissue neoplasms</label>
+                <input  class="toggle" hidden  name="Indications" id="Cysts" type="checkbox" ><label for="Cysts" class="btn"><span>14</span>Cysts</label>
+                <input  class="toggle" hidden  name="Indications" id="Diabetes mellitus" type="checkbox" ><label for="Diabetes mellitus" class="btn"><span>15</span>Diabetes mellitus</label>
+                <input  class="toggle" hidden  name="Indications" id="Diabetic complications" type="checkbox" ><label for="Diabetic complications" class="btn"><span>16</span>Diabetic complications</label>
+                <input  class="toggle" hidden  name="Indications" id="Digestive system disorders" type="checkbox" ><label for="Digestive system disorders" class="btn"><span>17</span>Digestive system disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Drug toxicity" type="checkbox" ><label for="Drug toxicity" class="btn"><span>18</span>Drug toxicity</label>
+                <input  class="toggle" hidden  name="Indications" id="Ear nose and throat disorders" type="checkbox" ><label for="Ear nose and throat disorders" class="btn"><span>19</span>Ear nose and throat disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Endocrine disorders" type="checkbox" ><label for="Endocrine disorders" class="btn"><span>20</span>Endocrine disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Eye disorders" type="checkbox" ><label for="Eye disorders" class="btn"><span>21</span>Eye disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Eye neoplasms" type="checkbox" ><label for="Eye neoplasms" class="btn"><span>22</span>Eye neoplasms</label>
+                <input  class="toggle" hidden  name="Indications" id="Female urogenital diseases and pregnancy complications" type="checkbox" ><label for="Female urogenital diseases and pregnancy complications" class="btn"><span>23</span>Female urogenital diseases and pregnancy complications</label>
+                <input  class="toggle" hidden  name="Indications" id="Gastrointestinal cancer" type="checkbox" ><label for="Gastrointestinal cancer" class="btn"><span>24</span>Gastrointestinal cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Genitourinary disorders" type="checkbox" ><label for="Genitourinary disorders" class="btn"><span>25</span>Genitourinary disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Germ cell and embryonal neoplasms" type="checkbox" ><label for="Germ cell and embryonal neoplasms" class="btn"><span>26</span>Germ cell and embryonal neoplasms</label>
+                <input  class="toggle" hidden  name="Indications" id="Glandular and epithelial neoplasms" type="checkbox" ><label for="Glandular and epithelial neoplasms" class="btn"><span>27</span>Glandular and epithelial neoplasms</label>
+                <input  class="toggle" hidden  name="Indications" id="Haematological disorders" type="checkbox" ><label for="Haematological disorders" class="btn"><span>28</span>Haematological disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Haematological malignancies" type="checkbox" ><label for="Haematological malignancies" class="btn"><span>29</span>Haematological malignancies</label>
+                <input  class="toggle" hidden  name="Indications" id="Haemoblastosis" type="checkbox" ><label for="Haemoblastosis" class="btn"><span>30</span>Haemoblastosis</label>
+                <input  class="toggle" hidden  name="Indications" id="Hair disorders" type="checkbox" ><label for="Hair disorders" class="btn"><span>31</span>Hair disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Head and neck cancer" type="checkbox" ><label for="Head and neck cancer" class="btn"><span>32</span>Head and neck cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Heart disorders" type="checkbox" ><label for="Heart disorders" class="btn"><span>33</span>Heart disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Hereditary neoplastic syndromes" type="checkbox" ><label for="Hereditary neoplastic syndromes" class="btn"><span>34</span>Hereditary neoplastic syndromes</label>
+                <input  class="toggle" hidden  name="Indications" id="Immunological disorders" type="checkbox" ><label for="Immunological disorders" class="btn"><span>35</span>Immunological disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Inborn genetic disorders" type="checkbox" ><label for="Inborn genetic disorders" class="btn"><span>36</span>Inborn genetic disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Infections" type="checkbox" ><label for="Infections" class="btn"><span>37</span>Infections</label>
+                <input  class="toggle" hidden  name="Indications" id="Liver cancer" type="checkbox" ><label for="Liver cancer" class="btn"><span>38</span>Liver cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Liver disorders" type="checkbox" ><label for="Liver disorders" class="btn"><span>39</span>Liver disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Lung cancer" type="checkbox" ><label for="Lung cancer" class="btn"><span>40</span>Lung cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Lymphatic disorders" type="checkbox" ><label for="Lymphatic disorders" class="btn"><span>41</span>Lymphatic disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Male genital diseases" type="checkbox" ><label for="Male genital diseases" class="btn"><span>42</span>Male genital diseases</label>
+                <input  class="toggle" hidden  name="Indications" id="Male urogenital diseases" type="checkbox" ><label for="Male urogenital diseases" class="btn"><span>43</span>Male urogenital diseases</label>
+                <input  class="toggle" hidden  name="Indications" id="Malignant thymoma" type="checkbox" ><label for="Malignant thymoma" class="btn"><span>44</span>Malignant thymoma</label>
+                <input  class="toggle" hidden  name="Indications" id="Mental disorders" type="checkbox" ><label for="Mental disorders" class="btn"><span>45</span>Mental disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Mesothelioma" type="checkbox" ><label for="Mesothelioma" class="btn"><span>46</span>Mesothelioma</label>
+                <input  class="toggle" hidden  name="Indications" id="Metabolic disorders" type="checkbox" ><label for="Metabolic disorders" class="btn"><span>47</span>Metabolic disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Mouth disorders" type="checkbox" ><label for="Mouth disorders" class="btn"><span>48</span>Mouth disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Multisystem disorders" type="checkbox" ><label for="Multisystem disorders" class="btn"><span>49</span>Multisystem disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Musculoskeletal disorders" type="checkbox" ><label for="Musculoskeletal disorders" class="btn"><span>50</span>Musculoskeletal disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Nerve tissue neoplasms" type="checkbox" ><label for="Nerve tissue neoplasms" class="btn"><span>51</span>Nerve tissue neoplasms</label>
+                <input  class="toggle" hidden  name="Indications" id="Neuroendocrine carcinoma" type="checkbox" ><label for="Neuroendocrine carcinoma" class="btn"><span>52</span>Neuroendocrine carcinoma</label>
+                <input  class="toggle" hidden  name="Indications" id="Neuroendocrine tumours" type="checkbox" ><label for="Neuroendocrine tumours" class="btn"><span>53</span>Neuroendocrine tumours</label>
+                <input  class="toggle" hidden  name="Indications" id="Neurologic manifestations" type="checkbox" ><label for="Neurologic manifestations" class="btn"><span>54</span>Neurologic manifestations</label>
+                <input  class="toggle" hidden  name="Indications" id="Neurological disorders" type="checkbox" ><label for="Neurological disorders" class="btn"><span>55</span>Neurological disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Neuromuscular blockade" type="checkbox" ><label for="Neuromuscular blockade" class="btn"><span>56</span>Neuromuscular blockade</label>
+                <input  class="toggle" hidden  name="Indications" id="Neuromuscular disorders" type="checkbox" ><label for="Neuromuscular disorders" class="btn"><span>57</span>Neuromuscular disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Nevi and melanomas" type="checkbox" ><label for="Nevi and melanomas" class="btn"><span>58</span>Nevi and melanomas</label>
+                <input  class="toggle" hidden  name="Indications" id="Nutrition disorders" type="checkbox" ><label for="Nutrition disorders" class="btn"><span>59</span>Nutrition disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Pancreatic cancer" type="checkbox" ><label for="Pancreatic cancer" class="btn"><span>60</span>Pancreatic cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Pathologic processes" type="checkbox" ><label for="Pathologic processes" class="btn"><span>61</span>Pathologic processes</label>
+                <input  class="toggle" hidden  name="Indications" id="Pathological conditions| anatomical" type="checkbox" ><label for="Pathological conditions| anatomical" class="btn"><span>62</span>Pathological conditions| anatomical</label>
+                <input  class="toggle" hidden  name="Indications" id="Pathology and biological functions" type="checkbox" ><label for="Pathology and biological functions" class="btn"><span>63</span>Pathology and biological functions</label>
+                <input  class="toggle" hidden  name="Indications" id="Pelvic cancer" type="checkbox" ><label for="Pelvic cancer" class="btn"><span>64</span>Pelvic cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Peripheral nervous system neoplasms" type="checkbox" ><label for="Peripheral nervous system neoplasms" class="btn"><span>65</span>Peripheral nervous system neoplasms</label>
+                <input  class="toggle" hidden  name="Indications" id="Peritoneal cancer" type="checkbox" ><label for="Peritoneal cancer" class="btn"><span>66</span>Peritoneal cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Pigmentation" type="checkbox" ><label for="Pigmentation" class="btn"><span>67</span>Pigmentation</label>
+                <input  class="toggle" hidden  name="Indications" id="Plasmacytoma" type="checkbox" ><label for="Plasmacytoma" class="btn"><span>68</span>Plasmacytoma</label>
+                <input  class="toggle" hidden  name="Indications" id="Precancerous conditions" type="checkbox" ><label for="Precancerous conditions" class="btn"><span>69</span>Precancerous conditions</label>
+                <input  class="toggle" hidden  name="Indications" id="Respiration disorders" type="checkbox" ><label for="Respiration disorders" class="btn"><span>70</span>Respiration disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Respiratory hypersensitivity" type="checkbox" ><label for="Respiratory hypersensitivity" class="btn"><span>71</span>Respiratory hypersensitivity</label>
+                <input  class="toggle" hidden  name="Indications" id="Respiratory tract disorders" type="checkbox" ><label for="Respiratory tract disorders" class="btn"><span>72</span>Respiratory tract disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Respiratory tract infections" type="checkbox" ><label for="Respiratory tract infections" class="btn"><span>73</span>Respiratory tract infections</label>
+                <input  class="toggle" hidden  name="Indications" id="Sarcoma" type="checkbox" ><label for="Sarcoma" class="btn"><span>74</span>Sarcoma</label>
+                <input  class="toggle" hidden  name="Indications" id="Sclerosis" type="checkbox" ><label for="Sclerosis" class="btn"><span>75</span>Sclerosis</label>
+                <input  class="toggle" hidden  name="Indications" id="Sedation" type="checkbox" ><label for="Sedation" class="btn"><span>76</span>Sedation</label>
+                <input  class="toggle" hidden  name="Indications" id="Signs and symptoms" type="checkbox" ><label for="Signs and symptoms" class="btn"><span>77</span>Signs and symptoms</label>
+                <input  class="toggle" hidden  name="Indications" id="Signs symptoms and ill-defined conditions" type="checkbox" ><label for="Signs symptoms and ill-defined conditions" class="btn"><span>78</span>Signs symptoms and ill-defined conditions</label>
+                <input  class="toggle" hidden  name="Indications" id="Skin and soft tissue infections" type="checkbox" ><label for="Skin and soft tissue infections" class="btn"><span>79</span>Skin and soft tissue infections</label>
+                <input  class="toggle" hidden  name="Indications" id="Skin cancer" type="checkbox" ><label for="Skin cancer" class="btn"><span>80</span>Skin cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Skin disorders" type="checkbox" ><label for="Skin disorders" class="btn"><span>81</span>Skin disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Solid tumours" type="checkbox" ><label for="Solid tumours" class="btn"><span>82</span>Solid tumours</label>
+                <input  class="toggle" hidden  name="Indications" id="Squamous cell cancer" type="checkbox" ><label for="Squamous cell cancer" class="btn"><span>83</span>Squamous cell cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Stem cell mobilisation" type="checkbox" ><label for="Stem cell mobilisation" class="btn"><span>84</span>Stem cell mobilisation</label>
+                <input  class="toggle" hidden  name="Indications" id="Substance-related disorders" type="checkbox" ><label for="Substance-related disorders" class="btn"><span>85</span>Substance-related disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Thyroid cancer" type="checkbox" ><label for="Thyroid cancer" class="btn"><span>86</span>Thyroid cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Urogenital abnormalities" type="checkbox" ><label for="Urogenital abnormalities" class="btn"><span>87</span>Urogenital abnormalities</label>
+                <input  class="toggle" hidden  name="Indications" id="Urogenital cancer" type="checkbox" ><label for="Urogenital cancer" class="btn"><span>88</span>Urogenital cancer</label>
+                <input  class="toggle" hidden  name="Indications" id="Vascular disorders" type="checkbox" ><label for="Vascular disorders" class="btn"><span>89</span>Vascular disorders</label>
+                <input  class="toggle" hidden  name="Indications" id="Wounds and injuries" type="checkbox" ><label for="Wounds and injuries" class="btn"><span>90</span>Wounds and injuries</label>
+            </div>
+         </div>
+          </div>
+      <div class="input-block">
+        <div class="label">Q3. Mechanism of Action</div>
+        <div class="input-control">
+            <div style="height:500px;width:100%;overflow:auto;scrollbar-base-color:gold;padding:10px;">
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Alkylating agents" type="checkbox" ><label for="Alkylating agents" class="btn"><span>0</span>Alkylating agents</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Amino acid modulators" type="checkbox" ><label for="Amino acid modulators" class="btn"><span>1</span>Amino acid modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Antacids" type="checkbox" ><label for="Antacids" class="btn"><span>2</span>Antacids</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Antimetabolites" type="checkbox" ><label for="Antimetabolites" class="btn"><span>3</span>Antimetabolites</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Antioxidants" type="checkbox" ><label for="Antioxidants" class="btn"><span>4</span>Antioxidants</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Binding agents" type="checkbox" ><label for="Binding agents" class="btn"><span>5</span>Binding agents</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Biological factor modulators" type="checkbox" ><label for="Biological factor modulators" class="btn"><span>6</span>Biological factor modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Biological transport modulators" type="checkbox" ><label for="Biological transport modulators" class="btn"><span>7</span>Biological transport modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Blood physiology modulators" type="checkbox" ><label for="Blood physiology modulators" class="btn"><span>8</span>Blood physiology modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Bone development modulators" type="checkbox" ><label for="Bone development modulators" class="btn"><span>9</span>Bone development modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Carbohydrate metabolism modulators" type="checkbox" ><label for="Carbohydrate metabolism modulators" class="btn"><span>10</span>Carbohydrate metabolism modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Cell modulators" type="checkbox" ><label for="Cell modulators" class="btn"><span>11</span>Cell modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Cell physiology modulators" type="checkbox" ><label for="Cell physiology modulators" class="btn"><span>12</span>Cell physiology modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Cell replacements" type="checkbox" ><label for="Cell replacements" class="btn"><span>13</span>Cell replacements</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Central nervous system modulators" type="checkbox" ><label for="Central nervous system modulators" class="btn"><span>14</span>Central nervous system modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Chemical modulators" type="checkbox" ><label for="Chemical modulators" class="btn"><span>15</span>Chemical modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Cholesterol absorption inhibitors" type="checkbox" ><label for="Cholesterol absorption inhibitors" class="btn"><span>16</span>Cholesterol absorption inhibitors</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Cholesterol synthesis inhibitors" type="checkbox" ><label for="Cholesterol synthesis inhibitors" class="btn"><span>17</span>Cholesterol synthesis inhibitors</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Cytokine inhibitors" type="checkbox" ><label for="Cytokine inhibitors" class="btn"><span>18</span>Cytokine inhibitors</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Cytokine modulators" type="checkbox" ><label for="Cytokine modulators" class="btn"><span>19</span>Cytokine modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Cytokine stimulants" type="checkbox" ><label for="Cytokine stimulants" class="btn"><span>20</span>Cytokine stimulants</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Diagnostic imaging enhancers" type="checkbox" ><label for="Diagnostic imaging enhancers" class="btn"><span>21</span>Diagnostic imaging enhancers</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Diuretics" type="checkbox" ><label for="Diuretics" class="btn"><span>22</span>Diuretics</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Enzyme modulators" type="checkbox" ><label for="Enzyme modulators" class="btn"><span>23</span>Enzyme modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Enzyme replacements" type="checkbox" ><label for="Enzyme replacements" class="btn"><span>24</span>Enzyme replacements</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Gene transference" type="checkbox" ><label for="Gene transference" class="btn"><span>25</span>Gene transference</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Genetic process modulators" type="checkbox" ><label for="Genetic process modulators" class="btn"><span>26</span>Genetic process modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Genetic structure modulators" type="checkbox" ><label for="Genetic structure modulators" class="btn"><span>27</span>Genetic structure modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Glycopeptide modulators" type="checkbox" ><label for="Glycopeptide modulators" class="btn"><span>28</span>Glycopeptide modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Glycoprotein modulators" type="checkbox" ><label for="Glycoprotein modulators" class="btn"><span>29</span>Glycoprotein modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Growth substance modulators" type="checkbox" ><label for="Growth substance modulators" class="btn"><span>30</span>Growth substance modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Haemic and immune system modulators" type="checkbox" ><label for="Haemic and immune system modulators" class="btn"><span>31</span>Haemic and immune system modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Hormone modulators" type="checkbox" ><label for="Hormone modulators" class="btn"><span>32</span>Hormone modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Hormone replacements" type="checkbox" ><label for="Hormone replacements" class="btn"><span>33</span>Hormone replacements</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Immunologic cytotoxicity" type="checkbox" ><label for="Immunologic cytotoxicity" class="btn"><span>34</span>Immunologic cytotoxicity</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Inorganic chemical modulators" type="checkbox" ><label for="Inorganic chemical modulators" class="btn"><span>35</span>Inorganic chemical modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Inorganic chemical replacements" type="checkbox" ><label for="Inorganic chemical replacements" class="btn"><span>36</span>Inorganic chemical replacements</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Ion channel agonists" type="checkbox" ><label for="Ion channel agonists" class="btn"><span>37</span>Ion channel agonists</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Ion channel antagonists" type="checkbox" ><label for="Ion channel antagonists" class="btn"><span>38</span>Ion channel antagonists</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Ion channel modulators" type="checkbox" ><label for="Ion channel modulators" class="btn"><span>39</span>Ion channel modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Ionising radiation emitters" type="checkbox" ><label for="Ionising radiation emitters" class="btn"><span>40</span>Ionising radiation emitters</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Lipid modulators" type="checkbox" ><label for="Lipid modulators" class="btn"><span>41</span>Lipid modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Macromolecular substance inhibitors" type="checkbox" ><label for="Macromolecular substance inhibitors" class="btn"><span>42</span>Macromolecular substance inhibitors</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Macromolecular substance stimulants" type="checkbox" ><label for="Macromolecular substance stimulants" class="btn"><span>43</span>Macromolecular substance stimulants</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Membrane glycoprotein modulators" type="checkbox" ><label for="Membrane glycoprotein modulators" class="btn"><span>44</span>Membrane glycoprotein modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Metabolism-modulators" type="checkbox" ><label for="Metabolism-modulators" class="btn"><span>45</span>Metabolism-modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Microbiome modulators" type="checkbox" ><label for="Microbiome modulators" class="btn"><span>46</span>Microbiome modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Multiprotein complex modulators" type="checkbox" ><label for="Multiprotein complex modulators" class="btn"><span>47</span>Multiprotein complex modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Nervous system modulators" type="checkbox" ><label for="Nervous system modulators" class="btn"><span>48</span>Nervous system modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Neuromuscular blocking agents" type="checkbox" ><label for="Neuromuscular blocking agents" class="btn"><span>49</span>Neuromuscular blocking agents</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Neurotransmitter agents" type="checkbox" ><label for="Neurotransmitter agents" class="btn"><span>50</span>Neurotransmitter agents</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Neurotransmitter modulators" type="checkbox" ><label for="Neurotransmitter modulators" class="btn"><span>51</span>Neurotransmitter modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Nitric oxide donors" type="checkbox" ><label for="Nitric oxide donors" class="btn"><span>52</span>Nitric oxide donors</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Nucleic acid nucleotide and nucleoside modulators" type="checkbox" ><label for="Nucleic acid nucleotide and nucleoside modulators" class="btn"><span>53</span>Nucleic acid nucleotide and nucleoside modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Ovarian follicle modulators" type="checkbox" ><label for="Ovarian follicle modulators" class="btn"><span>54</span>Ovarian follicle modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Peptide hormone modulators" type="checkbox" ><label for="Peptide hormone modulators" class="btn"><span>55</span>Peptide hormone modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Peptide modulators" type="checkbox" ><label for="Peptide modulators" class="btn"><span>56</span>Peptide modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Peptide replacements" type="checkbox" ><label for="Peptide replacements" class="btn"><span>57</span>Peptide replacements</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Photosensitisers" type="checkbox" ><label for="Photosensitisers" class="btn"><span>58</span>Photosensitisers</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Platelet aggregation modulators" type="checkbox" ><label for="Platelet aggregation modulators" class="btn"><span>59</span>Platelet aggregation modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Polymer modulators" type="checkbox" ><label for="Polymer modulators" class="btn"><span>60</span>Polymer modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Polysaccharide inhibitors" type="checkbox" ><label for="Polysaccharide inhibitors" class="btn"><span>61</span>Polysaccharide inhibitors</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Polysaccharide modulators" type="checkbox" ><label for="Polysaccharide modulators" class="btn"><span>62</span>Polysaccharide modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Protein modulators" type="checkbox" ><label for="Protein modulators" class="btn"><span>63</span>Protein modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Protein replacements" type="checkbox" ><label for="Protein replacements" class="btn"><span>64</span>Protein replacements</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Receptor inverse agonists" type="checkbox" ><label for="Receptor inverse agonists" class="btn"><span>65</span>Receptor inverse agonists</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Scavengers" type="checkbox" ><label for="Scavengers" class="btn"><span>66</span>Scavengers</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Signal transduction pathway modulators" type="checkbox" ><label for="Signal transduction pathway modulators" class="btn"><span>67</span>Signal transduction pathway modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Steroid modulators" type="checkbox" ><label for="Steroid modulators" class="btn"><span>68</span>Steroid modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Testosterone replacements" type="checkbox" ><label for="Testosterone replacements" class="btn"><span>69</span>Testosterone replacements</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Tissue replacements" type="checkbox" ><label for="Tissue replacements" class="btn"><span>70</span>Tissue replacements</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Undefined mechanism" type="checkbox" ><label for="Undefined mechanism" class="btn"><span>71</span>Undefined mechanism</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Vascular disrupting agents" type="checkbox" ><label for="Vascular disrupting agents" class="btn"><span>72</span>Vascular disrupting agents</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Virus internalisation modulators" type="checkbox" ><label for="Virus internalisation modulators" class="btn"><span>73</span>Virus internalisation modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Virus replication modulators" type="checkbox" ><label for="Virus replication modulators" class="btn"><span>74</span>Virus replication modulators</label>
+                <input  class="toggle" hidden  name="mechanism_of_action" id="Vitamin modulators" type="checkbox" ><label for="Vitamin modulators" class="btn"><span>75</span>Vitamin modulators</label>
+            </div>
+         </div>
+      </div>
+        <div class="input-block">
+        <div class="label">Q3. Drug class</div>
+        <div class="input-control">
+        <div style="height:500px;width:100%;overflow:auto;scrollbar-base-color:gold;padding:10px;">
+            <input  class="toggle" hidden  name="Drug class" id="Abortifacients" type="checkbox" ><label for="Abortifacients" class="btn"><span>0</span>Abortifacients</label>
+                <input  class="toggle" hidden  name="Drug class" id="Adjuvants" type="checkbox" ><label for="Adjuvants" class="btn"><span>1</span>Adjuvants</label>
+                <input  class="toggle" hidden  name="Drug class" id="Anabolic steroids" type="checkbox" ><label for="Anabolic steroids" class="btn"><span>2</span>Anabolic steroids</label>
+                <input  class="toggle" hidden  name="Drug class" id="Anaesthetics" type="checkbox" ><label for="Anaesthetics" class="btn"><span>3</span>Anaesthetics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Anti-infectives" type="checkbox" ><label for="Anti-infectives" class="btn"><span>4</span>Anti-infectives</label>
+                <input  class="toggle" hidden  name="Drug class" id="Anti-inflammatories" type="checkbox" ><label for="Anti-inflammatories" class="btn"><span>5</span>Anti-inflammatories</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antiallergics" type="checkbox" ><label for="Antiallergics" class="btn"><span>6</span>Antiallergics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antiasthmatics" type="checkbox" ><label for="Antiasthmatics" class="btn"><span>7</span>Antiasthmatics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antibronchitics" type="checkbox" ><label for="Antibronchitics" class="btn"><span>8</span>Antibronchitics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Anticoagulants" type="checkbox" ><label for="Anticoagulants" class="btn"><span>9</span>Anticoagulants</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antidiarrhoeals" type="checkbox" ><label for="Antidiarrhoeals" class="btn"><span>10</span>Antidiarrhoeals</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antidotes" type="checkbox" ><label for="Antidotes" class="btn"><span>11</span>Antidotes</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antifibrotics" type="checkbox" ><label for="Antifibrotics" class="btn"><span>12</span>Antifibrotics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antihistamines" type="checkbox" ><label for="Antihistamines" class="btn"><span>13</span>Antihistamines</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antihormones" type="checkbox" ><label for="Antihormones" class="btn"><span>14</span>Antihormones</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antihypercalcaemics" type="checkbox" ><label for="Antihypercalcaemics" class="btn"><span>15</span>Antihypercalcaemics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antihyperglycaemics" type="checkbox" ><label for="Antihyperglycaemics" class="btn"><span>16</span>Antihyperglycaemics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antihypoglycaemics" type="checkbox" ><label for="Antihypoglycaemics" class="btn"><span>17</span>Antihypoglycaemics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antineoplastics" type="checkbox" ><label for="Antineoplastics" class="btn"><span>18</span>Antineoplastics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antipruritics" type="checkbox" ><label for="Antipruritics" class="btn"><span>19</span>Antipruritics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antipyretics" type="checkbox" ><label for="Antipyretics" class="btn"><span>20</span>Antipyretics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antirheumatics" type="checkbox" ><label for="Antirheumatics" class="btn"><span>21</span>Antirheumatics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antisecretories" type="checkbox" ><label for="Antisecretories" class="btn"><span>22</span>Antisecretories</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antispasmodics" type="checkbox" ><label for="Antispasmodics" class="btn"><span>23</span>Antispasmodics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antispastics" type="checkbox" ><label for="Antispastics" class="btn"><span>24</span>Antispastics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antitussives" type="checkbox" ><label for="Antitussives" class="btn"><span>25</span>Antitussives</label>
+                <input  class="toggle" hidden  name="Drug class" id="Antiulcers" type="checkbox" ><label for="Antiulcers" class="btn"><span>26</span>Antiulcers</label>
+                <input  class="toggle" hidden  name="Drug class" id="Bronchodilators" type="checkbox" ><label for="Bronchodilators" class="btn"><span>27</span>Bronchodilators</label>
+                <input  class="toggle" hidden  name="Drug class" id="Calcium regulators" type="checkbox" ><label for="Calcium regulators" class="btn"><span>28</span>Calcium regulators</label>
+                <input  class="toggle" hidden  name="Drug class" id="Calcium supplements" type="checkbox" ><label for="Calcium supplements" class="btn"><span>29</span>Calcium supplements</label>
+                <input  class="toggle" hidden  name="Drug class" id="Cardiovascular therapies" type="checkbox" ><label for="Cardiovascular therapies" class="btn"><span>30</span>Cardiovascular therapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Chemopreventatives" type="checkbox" ><label for="Chemopreventatives" class="btn"><span>31</span>Chemopreventatives</label>
+                <input  class="toggle" hidden  name="Drug class" id="Chemoprotectants" type="checkbox" ><label for="Chemoprotectants" class="btn"><span>32</span>Chemoprotectants</label>
+                <input  class="toggle" hidden  name="Drug class" id="Chemosensitisers" type="checkbox" ><label for="Chemosensitisers" class="btn"><span>33</span>Chemosensitisers</label>
+                <input  class="toggle" hidden  name="Drug class" id="Choleretics" type="checkbox" ><label for="Choleretics" class="btn"><span>34</span>Choleretics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Coagulants" type="checkbox" ><label for="Coagulants" class="btn"><span>35</span>Coagulants</label>
+                <input  class="toggle" hidden  name="Drug class" id="Cytoprotectives" type="checkbox" ><label for="Cytoprotectives" class="btn"><span>36</span>Cytoprotectives</label>
+                <input  class="toggle" hidden  name="Drug class" id="Decongestants" type="checkbox" ><label for="Decongestants" class="btn"><span>37</span>Decongestants</label>
+                <input  class="toggle" hidden  name="Drug class" id="Digestion aids" type="checkbox" ><label for="Digestion aids" class="btn"><span>38</span>Digestion aids</label>
+                <input  class="toggle" hidden  name="Drug class" id="Drug withdrawal therapies" type="checkbox" ><label for="Drug withdrawal therapies" class="btn"><span>39</span>Drug withdrawal therapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Erectile dysfunction therapies" type="checkbox" ><label for="Erectile dysfunction therapies" class="btn"><span>40</span>Erectile dysfunction therapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Expectorants" type="checkbox" ><label for="Expectorants" class="btn"><span>41</span>Expectorants</label>
+                <input  class="toggle" hidden  name="Drug class" id="Eye disorder therapies" type="checkbox" ><label for="Eye disorder therapies" class="btn"><span>42</span>Eye disorder therapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Foot disorder therapies" type="checkbox" ><label for="Foot disorder therapies" class="btn"><span>43</span>Foot disorder therapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Gallstone therapies" type="checkbox" ><label for="Gallstone therapies" class="btn"><span>44</span>Gallstone therapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Gastrokinetics" type="checkbox" ><label for="Gastrokinetics" class="btn"><span>45</span>Gastrokinetics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Hepatoprotectants" type="checkbox" ><label for="Hepatoprotectants" class="btn"><span>46</span>Hepatoprotectants</label>
+                <input  class="toggle" hidden  name="Drug class" id="Hormonal replacements" type="checkbox" ><label for="Hormonal replacements" class="btn"><span>47</span>Hormonal replacements</label>
+                <input  class="toggle" hidden  name="Drug class" id="Hyperphosphataemia therapies" type="checkbox" ><label for="Hyperphosphataemia therapies" class="btn"><span>48</span>Hyperphosphataemia therapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Immunotherapies" type="checkbox" ><label for="Immunotherapies" class="btn"><span>49</span>Immunotherapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Infertility therapies" type="checkbox" ><label for="Infertility therapies" class="btn"><span>50</span>Infertility therapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Insulin sensitisers" type="checkbox" ><label for="Insulin sensitisers" class="btn"><span>51</span>Insulin sensitisers</label>
+                <input  class="toggle" hidden  name="Drug class" id="Irritable bowel syndrome therapies" type="checkbox" ><label for="Irritable bowel syndrome therapies" class="btn"><span>52</span>Irritable bowel syndrome therapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Laxatives" type="checkbox" ><label for="Laxatives" class="btn"><span>53</span>Laxatives</label>
+                <input  class="toggle" hidden  name="Drug class" id="Mucolytics" type="checkbox" ><label for="Mucolytics" class="btn"><span>54</span>Mucolytics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Muscle relaxants" type="checkbox" ><label for="Muscle relaxants" class="btn"><span>55</span>Muscle relaxants</label>
+                <input  class="toggle" hidden  name="Drug class" id="Neuroprotectants" type="checkbox" ><label for="Neuroprotectants" class="btn"><span>56</span>Neuroprotectants</label>
+                <input  class="toggle" hidden  name="Drug class" id="Neuropsychotherapeutics" type="checkbox" ><label for="Neuropsychotherapeutics" class="btn"><span>57</span>Neuropsychotherapeutics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Obesity therapies" type="checkbox" ><label for="Obesity therapies" class="btn"><span>58</span>Obesity therapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Osteoporosis therapies" type="checkbox" ><label for="Osteoporosis therapies" class="btn"><span>59</span>Osteoporosis therapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Oxytocics" type="checkbox" ><label for="Oxytocics" class="btn"><span>60</span>Oxytocics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Phytotherapies" type="checkbox" ><label for="Phytotherapies" class="btn"><span>61</span>Phytotherapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Probiotics" type="checkbox" ><label for="Probiotics" class="btn"><span>62</span>Probiotics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Radioprotectives" type="checkbox" ><label for="Radioprotectives" class="btn"><span>63</span>Radioprotectives</label>
+                <input  class="toggle" hidden  name="Drug class" id="Radiosensitisers" type="checkbox" ><label for="Radiosensitisers" class="btn"><span>64</span>Radiosensitisers</label>
+                <input  class="toggle" hidden  name="Drug class" id="Sclerosants" type="checkbox" ><label for="Sclerosants" class="btn"><span>65</span>Sclerosants</label>
+                <input  class="toggle" hidden  name="Drug class" id="Skin disorder therapies" type="checkbox" ><label for="Skin disorder therapies" class="btn"><span>66</span>Skin disorder therapies</label>
+                <input  class="toggle" hidden  name="Drug class" id="Surfactants" type="checkbox" ><label for="Surfactants" class="btn"><span>67</span>Surfactants</label>
+                <input  class="toggle" hidden  name="Drug class" id="Tocolytics" type="checkbox" ><label for="Tocolytics" class="btn"><span>68</span>Tocolytics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Traditional medicines" type="checkbox" ><label for="Traditional medicines" class="btn"><span>69</span>Traditional medicines</label>
+                <input  class="toggle" hidden  name="Drug class" id="Uricosurics" type="checkbox" ><label for="Uricosurics" class="btn"><span>70</span>Uricosurics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Urologics" type="checkbox" ><label for="Urologics" class="btn"><span>71</span>Urologics</label>
+                <input  class="toggle" hidden  name="Drug class" id="Uroprotectives" type="checkbox" ><label for="Uroprotectives" class="btn"><span>72</span>Uroprotectives</label>
+
+        </div>
+         </div>
+      </div>
+
+      </div>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+
+    <div class="upform-footer">
+      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </div>
+
+  </form>
+
+
+</div>
+<!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
