@@ -56,7 +56,6 @@
   }
 
   function handleFormSubmit(event) {
-    console.log("handle form submit called")
     // handles form submit without any jquery
     event.preventDefault();           // we are submitting via xhr below
     var form = event.target;
@@ -69,7 +68,6 @@
       console.log("Honeypot filled hence returning")
       return false;
     }
-
     disableAllButtons(form);
     var url = form.action;
     var xhr = new XMLHttpRequest();
@@ -93,7 +91,7 @@
         return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
     }).join('&');
     console.log("Sent form data")
-    xhr.send(encoded);
+    // xhr.send(encoded);
   }
 
   function loaded() {

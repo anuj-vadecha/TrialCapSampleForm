@@ -6,9 +6,9 @@ $.fn.upform = function() {
     $(container).find(".input-block").first().click();
   });
 
-  // $($this).find("form").submit(function(data) {
-  //   console.log(data)
-  // });
+  $($this).find("form").submit(function(data) {
+    return false
+  });
 
   $(container)
     .find(".input-block")
