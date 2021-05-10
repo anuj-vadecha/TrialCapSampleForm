@@ -91,7 +91,7 @@
         return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
     }).join('&');
     console.log("Sent form data")
-    // xhr.send(encoded);
+    xhr.send(encoded);
   }
 
   function loaded() {
