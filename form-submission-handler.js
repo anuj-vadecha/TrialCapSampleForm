@@ -42,7 +42,7 @@
             }
           }
         }
-        formData[name] = data.join(', ');
+        formData[name] = data.join(': ');
       }
     });
 
