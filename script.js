@@ -147,5 +147,9 @@ $(".upform").upform();
 
 
 function rangeSlide(value) {
-      document.getElementById('rangeValue').innerHTML = value;
+      document.getElementById('rangeValue').value = value;
+}
+
+function changeRange(value) {
+      document.getElementById('myRange').value = value;
 }

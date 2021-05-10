@@ -13,6 +13,7 @@
 <div class="upform">
   <form action="https://script.google.com/macros/s/AKfycbxSHMFqM029qVGR7-HJLkNVuYoxXpufmpaB1fL18oGn9Slw1VmgmggTfnZwU3KPnMzD/exec" method="POST">
 
+
     <div class="upform-header"></div>
 
     <div class="upform-main">
@@ -74,8 +75,12 @@
       <div class="input-block">
         <div class="label">Q3. Number of arms</div>
         <div class="input-control">
-        <div id="rangeValue">0</div>
-        <input name="number of arms" type="range" min="1" max="1000" value="1" class="slider" id="myRange" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+            <input id="rangeValue" oninput="changeRange(this.value)" name="number of arms" type="text" class="required" autocomplete="off" value="1">
+<!--                <input type="range">-->
+<!--            <input name="number of arms" type="" style="font-size: larger">-->
+<!--        <div id="rangeValue">-->
+<!--            0</div>-->
+            <input type="range" min="1" max="10" value="1" class="slider" id="myRange" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
          </div>
       </div>
 
