@@ -25,7 +25,7 @@ $.fn.upform = function() {
   });
 
   $(container).find('.input-block input[type="radio"]').change(function(e) {
-    moveNext(this);
+    // moveNext(this);
   });
 
   $(window).on("scroll", function() {
