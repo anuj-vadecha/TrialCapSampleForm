@@ -337,4 +337,8 @@ input[type="radio"].toggle:checked + label:after {
   font-weight: bold;
   padding: 5px 20px;
 }
+
+/*label[name="Indications"] {*/
+/*  display: None;*/
+/*}*/
 /* UPFORM STYLE ENDS*/
