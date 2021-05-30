@@ -14,7 +14,7 @@ $.fn.upform = function() {
     .find(".input-block")
     .not(".input-block input")
     .on("click", function() {
-    rescroll(this);
+    // rescroll(this);
   });
 
   $(container).find(".input-block input").keypress(function(e) {
