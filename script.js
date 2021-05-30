@@ -50,6 +50,7 @@ $.fn.upform = function() {
   }
 
   function rescroll(e) {
+    console.log("Rescroll called")
     $(window).scrollTo($(e), 200, {
       offset: { left: 100, top: -200 },
       queue: false
@@ -87,7 +88,7 @@ $.fn.upform = function() {
     .find(".input-block")
     .not(".input-block input")
     .on("click", function() {
-      rescroll(this);
+      // rescroll(this);
     });
 
   $(container).find(".input-block input").keypress(function(e) {
