@@ -398,15 +398,22 @@ document.querySelectorAll(" ").forEach(ele=>{$('label[for="'+ele.id+'"]').show()
 if (document.getElementById("Others").checked) {
 document.querySelectorAll(" ").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
 }
-    // $(window).scrollTop(100);
+  document.getElementsByClassName("bg")[0].style.backgroundImage = 'linear-gradient(-120deg, #993d00 50%, #303030 50%)';
+  document.getElementsByClassName("bg2")[0].style.backgroundImage = 'linear-gradient(-120deg, #993d00 50%, #303030 50%)';
+  document.getElementsByClassName("bg3")[0].style.backgroundImage = 'linear-gradient(-120deg, #993d00 50%, #303030 50%)';
   $('html, body').animate({scrollTop:100}, 'slow');
     // var elmnt = document.getElementById("form_inputs_2").click();
     // elmnt.scrollIntoView();
   }
+
   function form1() {
     document.getElementById('form_inputs_1').style.display='block'
     document.getElementById('form_inputs_2').style.display='None'
     document.getElementById('submit').style.display='None'
+    document.getElementsByClassName("bg")[0].style.backgroundImage = 'linear-gradient(-60deg, #000e7a 50%, #303030 50%)';
+    document.getElementsByClassName("bg2")[0].style.backgroundImage = 'linear-gradient(-60deg, #000e7a 50%, #303030 50%)';
+    document.getElementsByClassName("bg3")[0].style.backgroundImage = 'linear-gradient(-60deg, #000e7a 50%, #303030 50%)';
+
     $('html, body').animate({scrollTop:100}, 'slow');
     // var elmnt = document.getElementById("form_inputs_2").click();
     // elmnt.scrollIntoView();
