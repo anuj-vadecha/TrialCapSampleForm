@@ -34,10 +34,11 @@ $.fn.upform = function() {
     $(container).find(".input-block").each(function() {
       var etop = $(this).offset().top;
       var diff = etop - $(window).scrollTop();
-
       if (diff > 100 && diff < 300) {
         reinitState(this);
       }
+
+
     });
   });
 
