@@ -85,6 +85,11 @@
           if (thankYouMessage) {
             thankYouMessage.style.display = "block";
           }
+          document.getElementsByClassName("bg")[0].style.backgroundImage = 'linear-gradient(-60deg, #008000 50%, #303030 50%)';
+          document.getElementsByClassName("bg2")[0].style.backgroundImage = 'linear-gradient(-60deg, #008000 50%, #303030 50%)';
+          document.getElementsByClassName("bg3")[0].style.backgroundImage = 'linear-gradient(-60deg, #008000 50%, #303030 50%)';
+          document.getElementById("submit").style.display = 'none';
+
         }
     };
     var encoded = Object.keys(data).map(function(k) {
