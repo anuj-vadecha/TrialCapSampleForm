@@ -14,8 +14,7 @@ $.fn.upform = function() {
     .find(".input-block")
     .not(".input-block input")
     .on("click", function() {
-     if(!$(this).hasClass("active") )
-            && !$(this).hasClass('text-block'))
+     if(!$(this).hasClass("active") && !$(this).hasClass('text-block'))
        {
         rescroll(this);
       }
