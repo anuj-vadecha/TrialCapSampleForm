@@ -118,6 +118,38 @@
 })();
 
 
+function validateForm2() {
+  var selected=false;
+  var message=''
+  selected = false
+  document.getElementsByName('Drug class').forEach(ele=>{
+    if(ele.checked) {
+      selected=true
+    }
+  });
+  if(selected!==true) {
+     message+="Please enter atleast one of the Drug classes\n"
+  }
+
+  selected = false
+  document.getElementsByName('Indications').forEach(ele=>{
+    if(ele.checked) {
+      selected=true
+    }
+  });
+  if(selected!==true) {
+     message+="Please enter atleast one of the Drug classes\n"
+  }
+
+
+
+  if (message!=='') {
+    alert(message);
+    return false;
+  }
+  return true
+}
+
 function validateForm() {
   var selected=false;
   var message=''
@@ -683,7 +715,8 @@ function form2() {
     var bgColor = "rgb(" + x + "," + y + "," + z + ")";
  	console.log(bgColor);
     return bgColor
-    }
+  }
+
   function form1() {
 
     document.getElementById('form_inputs_1').style.display='block'
