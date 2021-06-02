@@ -119,14 +119,17 @@ function form2() {
   document.getElementsByName("Drug class").forEach(ele=>{
     ele.style.display='None'
     $('label[for="'+ele.id+'"]').hide ();
+    ele.checked=false
   })
   document.getElementsByName("Indications").forEach(ele=>{
     $('label[for="'+ele.id+'"]').hide ();
     ele.style.display='None'
+    ele.checked=false
   })
   document.getElementsByName("mechanism_of_action").forEach(ele=>{
     $('label[for="'+ele.id+'"]').hide ();
     ele.style.display='None'
+    ele.checked=false
   })
 if (document.getElementById("Dermatology").checked) {
 document.querySelectorAll(" #Cysts,#Hair\\ disorders,#Immunological\\ disorders,#Infections,#Nevi\\ and\\ melanomas,#Pigmentation,#Skin\\ and\\ soft\\ tissue\\ infections,#Skin\\ cancer,#Skin\\ disorders,#Vascular\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
@@ -409,8 +412,16 @@ document.querySelectorAll(" #Abortifacients,#Adjuvants,#Anabolic\\ steroids,#Ana
     // var elmnt = document.getElementById("form_inputs_2").click();
     // elmnt.scrollIntoView();
   }
-
+   function random_bg_color() {
+    var x = Math.floor(Math.random() * 256);
+    var y = 100+ Math.floor(Math.random() * 256);
+    var z = 50+ Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+ 	console.log(bgColor);
+    return bgColor
+    }
   function form1() {
+
     document.getElementById('form_inputs_1').style.display='block'
     document.getElementById('form_inputs_2').style.display='None'
     document.getElementById('submit').style.display='None'
@@ -418,7 +429,7 @@ document.querySelectorAll(" #Abortifacients,#Adjuvants,#Anabolic\\ steroids,#Ana
     document.getElementsByClassName("bg2")[0].style.backgroundImage = 'linear-gradient(-60deg, #000e7a 50%, #303030 50%)';
     document.getElementsByClassName("bg3")[0].style.backgroundImage = 'linear-gradient(-60deg, #000e7a 50%, #303030 50%)';
 
-    $('html, body').animate({scrollTop:100}, 'slow');
+    // $('html, body').animate({scrollTop:100}, 'slow');
     // var elmnt = document.getElementById("form_inputs_2").click();
     // elmnt.scrollIntoView();
   }
