@@ -162,6 +162,12 @@ function validateForm() {
     if(ele.value=='') {
       message+="Please enter an email\n"
     }
+    else {
+      if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value)) {
+      } else {
+        message += "Please enter a valid email \n"
+      }
+    }
   });
   selected = false
   document.getElementsByName('phase').forEach(ele=>{

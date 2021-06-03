@@ -326,6 +326,7 @@ input[type="radio"].toggle:checked + label:after {
   padding-bottom: 10px;
 }
 
+
 .upform .upform-main .input-block.active {
   opacity: 1;
 }
