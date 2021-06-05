@@ -58,6 +58,10 @@
   function handleFormSubmit(event) {
     // handles form submit without any jquery
     event.preventDefault();           // we are submitting via xhr below
+    if(!document.getElementById('agree').checked){
+      alert('Please agree to the privacy policy')
+      return
+    }
     var form = event.target;
     var formData = getFormData(form);
     console.log(formData)
@@ -85,6 +89,7 @@
           if (thankYouMessage) {
             thankYouMessage.style.display = "block";
           }
+          document.getElementById('terms_conditions').style.display='none';
           document.getElementsByClassName("bg")[0].style.backgroundImage = 'linear-gradient(-60deg, #008000 50%, #303030 50%)';
           document.getElementsByClassName("bg2")[0].style.backgroundImage = 'linear-gradient(-60deg, #008000 50%, #303030 50%)';
           document.getElementsByClassName("bg3")[0].style.backgroundImage = 'linear-gradient(-60deg, #008000 50%, #303030 50%)';

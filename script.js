@@ -11,7 +11,6 @@ $.fn.upform = function() {
   // });
 
   document.getElementById('understand').addEventListener("click",function (e){
-    console.log(e)
     moveNext(e.srcElement)
     rescroll(e.srcElement)
   })

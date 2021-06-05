@@ -58,6 +58,7 @@
   function handleFormSubmit(event) {
     // handles form submit without any jquery
     event.preventDefault();           // we are submitting via xhr below
+
     var form = event.target;
     var formData = getFormData(form);
     console.log(formData)
@@ -156,6 +157,7 @@ function validateForm() {
   document.getElementsByName('name').forEach(ele=>{
     if(ele.value=='') {
       message+="Please enter a name\n"
+      ele.parent().parent().scrollIntoView();
     }
   });
   document.getElementsByName('email').forEach(ele=>{
