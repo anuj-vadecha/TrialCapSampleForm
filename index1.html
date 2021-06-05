@@ -5,14 +5,15 @@
   <title>Trial Cap Sample form</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>UpForm</title><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700'>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+<title>UpForm</title><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css'><link rel="stylesheet" href="./style1.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <div class="upform">
+<!--    <div class="next_input" id="next_input">Next</div>-->
   <form id="form_trialcap" action="https://script.google.com/macros/s/AKfycbxSHMFqM029qVGR7-HJLkNVuYoxXpufmpaB1fL18oGn9Slw1VmgmggTfnZwU3KPnMzD/exec" method="POST">
 
     <button type="submit" disabled style="display: none" aria-hidden="true"></button>
@@ -25,9 +26,9 @@
 
         <div class="input-block">
          <div class="input-control">
-             <p>Please fill this form for us to understand the requirements. Please click on I understand to start filling the form</p>
+             <p>This form is intended for TrialCap to better understand the requirements of your project</p>
             <input id="toggle-on-q1" class="toggle toggle-left" name="T&C" value="yes" type="radio">
-            <label for="toggle-on-q1" id="understand" class="btn"><span>A</span> I understand</label>
+            <label for="toggle-on-q1" class="btn"><span>A</span> I understand</label>
          </div>
       </div>
 
@@ -404,7 +405,6 @@
          </div>
       </div>
         <btn id="next_button" onclick="form1()" class="btn btn-primary btn-lg" >Back</btn>
-
       </div>
         </div>
         <div class="thankyou_message" style="display:none;">
@@ -412,18 +412,16 @@
             We will get back to you soon! In case of any questions please contact us at ***@email.com</h2>
         </div>
         </div>
-<!--        <div class="bg"></div>-->
-<!--        <div class="bg bg2"></div>-->
-<!--        <div class="bg bg3"></div>-->
-    <div class="upform-footer">
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+    <div class="upform-footer" style="">
 
-        <div id="terms_conditions" class ="terms_conditions"  style="padding:50px;border: 1px solid white;padding-bottom: 50px;display: none">
-                <h4 style="padding-bottom: 10px">Privacy Policy and Declaration of Consent</h4>
-            <div style="padding-bottom: 20px">
-                <span style="font-size: large;">
-                    By submitting this form, you hereby agree and consent to your personal data which you provide to TrialCap Pte. Ltd. (“TrialCap”) in this form being processed, collected, used, disclosed, stored and/or retained by TrialCap and its members, officers, employees, agents, representatives and sub-contractors for the conduct of research, analysis and development activities (including but not limited to data analytics, surveys and/or profiling) to enhance TrialCap’s operations, as well as for reference and archival purposes.</span></div>
-            <label><input id="" style=""  name="terms_conditions" type="checkbox" class="largerCheckbox" name="checkBox"><span style="padding-left: 10px">I Agree</span></label>
-            <button id="submit" style="" type="submit"  class="btn btn-primary btn-lg">Submit</button>
+        <div id="terms_conditions" class ="terms_conditions"  style="padding:50px;border: 1px solid black;display: none;padding-bottom: 50px">
+
+            <label><input id="" style=""  name="terms_conditions" type="checkbox" class="largerCheckbox" name="checkBox">
+                <span style="font-size: large">By submitting this form, you agree to our privacy policy. Details of our privacy policy may be found at: "TrialCap.com"</span></input></label>
+            <button id="submit" style="display: none" type="submit"  class="btn btn-primary btn-lg">Submit</button>
         </div>
 
     </div>
@@ -431,7 +429,7 @@
 
 
 </div>
-<script data-cfasync="false" src="form-submission-handler.js"></script>
+<script data-cfasync="false" src="form-submission-handler1.js"></script>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js'></script><script  src="./script.js"></script>
 

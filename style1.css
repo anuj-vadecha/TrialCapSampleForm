@@ -1,22 +1,6 @@
 /* PAGE & INPUT STYLING */
-.next_input {
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
-  font-size: 2em;
-  border-radius: 50%;
-  background-color: red;
-  color: white;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  position: fixed;
-  z-index: 1;
-  bottom: 10%;
-  right: 4%;
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
-}
-input.largerCheckbox {
+input.largerCheckbox
+{
 	width: 30px;
 	height: 30px;
 }
@@ -32,6 +16,24 @@ input.largerCheckbox {
 .terms_conditions label span {
   vertical-align: middle;
 }
+.next_input {
+  height: 100px;
+  width: 100px;
+  line-height: 50px;
+  font-size: 2em;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1;
+  bottom: 5%;
+  right: 4%;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -64,7 +66,7 @@ input.largerCheckbox {
   grid-gap: 0.75rem; /* To define the gap between rows/columns */
   gap: 0.75rem;
   padding: 0.75rem;
-  color: #fff;
+  color: #181717;
 }
 
 .card {
@@ -135,7 +137,7 @@ input.largerCheckbox {
 
 .bg {
   animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #000e7a 50%, #303030 50%);
+  background-color: #FFFFFF;
   bottom:0;
   left:-50%;
   opacity:.5;
@@ -155,7 +157,7 @@ input.largerCheckbox {
 }
 
 h1 {
-  font-family:poppins;
+  font-family:'Poppins', sans-serif;;
 }
 
 @keyframes slide {
@@ -211,8 +213,8 @@ h1 {
 }
 
 body {
-  background: #000c60;
-  color: #FFF;
+  background: #fcfcfc;
+  color: #050404;
 }
 
 #question_label{
@@ -270,9 +272,9 @@ input[type="radio"].toggle + label {
   cursor: pointer;
   min-width: 80px;
 }
-input[type="radio"].toggle + label:hover {
+input.toggle + label:hover {
   background: none;
-  color: #FFF;
+  color: #43bcff;
 }
 input[type="radio"].toggle + label:after {
   content: "";
@@ -296,14 +298,14 @@ input[type="radio"].toggle.toggle-right + label:after {
   left: -100%;
 }
 input[type="radio"].toggle:checked + label {
-  background: #FFF;
+  background: #49a4ff;
   cursor: default;
-  color: #000;
+  color: #ffffff;
 }
 input[type="checkbox"].toggle:checked + label {
-  background: #FFF;
+  background: #49a4ff;
   cursor: default;
-  color: #000;
+  color: #ffffff;
 }
 input[type="radio"].toggle:checked + label:after {
   left: 0;
@@ -320,7 +322,7 @@ input[type="radio"].toggle:checked + label:after {
   color: #FFF;
 }
 .upform {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;;
   -webkit-touch-callout: initial; /* iOS Safari */
   -webkit-user-select: initial; /* Safari */
   -khtml-user-select: initial; /* Konqueror HTML */

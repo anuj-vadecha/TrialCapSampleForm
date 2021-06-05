@@ -10,6 +10,12 @@ $.fn.upform = function() {
   //   return false;
   // });
 
+  document.getElementById('understand').addEventListener("click",function (e){
+    console.log(e)
+    moveNext(e.srcElement)
+    rescroll(e.srcElement)
+  })
+
   $(container)
     .find(".input-block")
     .not(".input-block input")
@@ -25,6 +31,27 @@ $.fn.upform = function() {
         rescroll(this);
       }
     });
+
+
+  $(container)
+    .find(".input-block")
+    .not(".input-block input")
+    .on("focus", function() {
+      if(!$(this).hasClass('active')) {
+
+    $(container).find(".input-block input").each(function(e) {
+      $(e).blur();
+    });
+    $(this).addClass("active");
+      }
+     if(!$(this).hasClass("active") && !$(this).hasClass('text-block')) {
+        rescroll(this);
+      }
+    });
+
+
+
+
 
   $(container).find(".input-block input").keypress(function(e) {
     if (e.which == 13) {
@@ -44,8 +71,6 @@ $.fn.upform = function() {
       if (diff > 100 && diff < 300) {
         reinitState(this);
       }
-
-
     });
   });
 

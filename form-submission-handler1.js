@@ -229,7 +229,7 @@ function validateForm() {
 
 
 function form2() {
-  if(validateForm()) {
+  if(!validateForm()) {
     document.getElementById('form_inputs_1').style.display = 'None'
     document.getElementById('form_inputs_2').style.display = 'block'
     document.getElementById('terms_conditions').style.display = 'block'
@@ -726,11 +726,13 @@ function form2() {
   }
 
   function form1() {
+
     document.getElementById('form_inputs_1').style.display='block'
     document.getElementById('form_inputs_2').style.display='None'
     document.getElementById('submit').style.display='None'
     document.getElementById('terms_conditions').style.display = 'None'
     document.getElementById('submit').style.display = 'None'
+
     // document.getElementsByClassName("bg")[0].style.backgroundImage = 'linear-gradient(-60deg, #000e7a 50%, #303030 50%)';
     // document.getElementsByClassName("bg2")[0].style.backgroundImage = 'linear-gradient(-60deg, #000e7a 50%, #303030 50%)';
     // document.getElementsByClassName("bg3")[0].style.backgroundImage = 'linear-gradient(-60deg, #000e7a 50%, #303030 50%)';
