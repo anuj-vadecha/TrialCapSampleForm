@@ -255,463 +255,290 @@ function form2() {
       ele.style.display = 'None'
       ele.checked = false
     })
-    if (document.getElementById("Dermatology").checked) {
-      document.querySelectorAll(" #Cysts,#Hair\\ disorders,#Immunological\\ disorders,#Infections,#Nevi\\ and\\ melanomas,#Pigmentation,#Skin\\ and\\ soft\\ tissue\\ infections,#Skin\\ cancer,#Skin\\ disorders,#Vascular\\ disorders").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Cardiovascular").checked) {
-      document.querySelectorAll(" #Cardiovascular\\ disorders,#Heart\\ disorders,#Immunological\\ disorders,#Infections,#Vascular\\ disorders").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Oncology").checked) {
-      document.querySelectorAll(" #Benign\\ tumours,#Biliary\\ cancer,#Bone\\ cancer,#Breast\\ cancer,#CNS\\ cancer,#Cancer\\ metastases,#Colorectal\\ cancer,#Connective\\ and\\ soft\\ tissue\\ neoplasms,#Connective\\ tissue\\ neoplasms,#Drug\\ toxicity,#Eye\\ neoplasms,#Gastrointestinal\\ cancer,#Germ\\ cell\\ and\\ embryonal\\ neoplasms,#Glandular\\ and\\ epithelial\\ neoplasms,#Haematological\\ malignancies,#Head\\ and\\ neck\\ cancer,#Hereditary\\ neoplastic\\ syndromes,#Immunological\\ disorders,#Liver\\ cancer,#Lung\\ cancer,#Malignant\\ thymoma,#Mesothelioma,#Nerve\\ tissue\\ neoplasms,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Nevi\\ and\\ melanomas,#Pancreatic\\ cancer,#Pelvic\\ cancer,#Peripheral\\ nervous\\ system\\ neoplasms,#Peritoneal\\ cancer,#Plasmacytoma,#Precancerous\\ conditions,#Sarcoma,#Skin\\ cancer,#Solid\\ tumours,#Squamous\\ cell\\ cancer,#Thyroid\\ cancer").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Rare Diseases").checked) {
-      document.querySelectorAll(" #Congenital\\ disorders,#Germ\\ cell\\ and\\ embryonal\\ neoplasms,#Glandular\\ and\\ epithelial\\ neoplasms,#Hereditary\\ neoplastic\\ syndromes,#Immunological\\ disorders,#Inborn\\ genetic\\ disorders,#Infections,#Mental\\ disorders,#Metabolic\\ disorders,#Pigmentation").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Psychiatry").checked) {
-      document.querySelectorAll(" #Behaviour\\ and\\ behaviour\\ mechanisms,#Mental\\ disorders,#Nutrition\\ disorders").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Psychology").checked) {
-      document.querySelectorAll(" #Behaviour\\ and\\ behaviour\\ mechanisms,#Mental\\ disorders,#Nutrition\\ disorders,#Substance-related\\ disorders").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Hepatology").checked) {
-      document.querySelectorAll(" #Biliary\\ cancer,#Infections,#Liver\\ cancer,#Liver\\ disorders,#Metabolic\\ disorders,#Pancreatic\\ cancer").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Endocrinology & Metabolic Diseases").checked) {
-      document.querySelectorAll(" #Diabetes\\ mellitus,#Diabetic\\ complications,#Endocrine\\ disorders,#Immunological\\ disorders,#Metabolic\\ disorders,#Thyroid\\ cancer").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("ENT").checked) {
-      document.querySelectorAll(" #Anaesthesia,#Benign\\ tumours,#Colorectal\\ cancer,#Digestive\\ system\\ disorders,#Drug\\ toxicity,#Ear\\ nose\\ and\\ throat\\ disorders,#Gastrointestinal\\ cancer,#Infections,#Mouth\\ disorders,#Peritoneal\\ cancer,#Sedation,#Thyroid\\ cancer,#Wounds\\ and\\ injuries").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Infectious Diseases").checked) {
-      document.querySelectorAll(" #Infections,#Respiratory\\ tract\\ infections").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Respiratory").checked) {
-      document.querySelectorAll(" #Infections,#Lung\\ cancer,#Mesothelioma,#Respiration\\ disorders,#Respiratory\\ hypersensitivity,#Respiratory\\ tract\\ disorders,#Respiratory\\ tract\\ infections").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Neurology").checked) {
-      document.querySelectorAll(" #CNS\\ cancer,#Infections,#Nerve\\ tissue\\ neoplasms,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Neurologic\\ manifestations,#Neurological\\ disorders,#Neuromuscular\\ blockade,#Neuromuscular\\ disorders,#Peripheral\\ nervous\\ system\\ neoplasms,#Sclerosis").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Urology").checked) {
-      document.querySelectorAll(" #CNS\\ cancer,#Infections,#Male\\ genital\\ diseases,#Male\\ urogenital\\ diseases,#Nerve\\ tissue\\ neoplasms,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Neurologic\\ manifestations,#Neurological\\ disorders,#Neuromuscular\\ blockade,#Neuromuscular\\ disorders,#Peripheral\\ nervous\\ system\\ neoplasms,#Sclerosis,#Urogenital\\ abnormalities,#Urogenital\\ cancer").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Men's Health").checked) {
-      document.querySelectorAll(" #Breast\\ cancer,#Pelvic\\ cancer,#Urogenital\\ abnormalities,#Urogenital\\ cancer").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Women's Health").checked) {
-      document.querySelectorAll(" #Breast\\ cancer,#Pelvic\\ cancer,#Urogenital\\ abnormalities").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Gastoenterology").checked) {
-      document.querySelectorAll(" #Infections").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Hematology").checked) {
-      document.querySelectorAll(" #Infections").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Soft & Connective Tissue").checked) {
-      document.querySelectorAll(" #Connective\\ and\\ soft\\ tissue\\ neoplasms,#Connective\\ tissue\\ disorders,#Connective\\ tissue\\ neoplasms,#Cysts,#Infections,#Lymphatic\\ disorders,#Mesothelioma,#Plasmacytoma,#Sarcoma,#Skin\\ and\\ soft\\ tissue\\ infections").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Opthalmology").checked) {
-      document.querySelectorAll(" #Infections").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Internal Medicine").checked) {
-      document.querySelectorAll(" #Infections").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Musculoskeletal").checked) {
-      document.querySelectorAll(" #Bone\\ cancer,#Connective\\ tissue\\ disorders,#Connective\\ tissue\\ neoplasms,#Infections,#Musculoskeletal\\ disorders,#Neuromuscular\\ blockade,#Neuromuscular\\ disorders,#Sarcoma,#Skin\\ and\\ soft\\ tissue\\ infections").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Surgery").checked) {
-      document.querySelectorAll(" #Anaesthesia,#Sedation,#Wounds\\ and\\ injuries").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Pain & Analgesia").checked) {
-      document.querySelectorAll(" #Anaesthesia,#Sedation").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Toxicology & Poisoning").checked) {
-      document.querySelectorAll(" #Drug\\ toxicity,#Substance-related\\ disorders").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Immunology").checked) {
-      document.querySelectorAll(" #Drug\\ toxicity,#Immunological\\ disorders,#Lymphatic\\ disorders,#Respiratory\\ hypersensitivity").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Accident & Emergency").checked) {
-      document.querySelectorAll(" #Anaesthesia,#Drug\\ toxicity,#Sedation,#Wounds\\ and\\ injuries").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Gynaecology").checked) {
-      document.querySelectorAll(" #Genitourinary\\ disorders,#Urogenital\\ abnormalities,#Urogenital\\ cancer").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Nutrition & Weight Loss").checked) {
-      document.querySelectorAll(" #Nutrition\\ disorders").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Tissue & Regenerative Medicine").checked) {
-      document.querySelectorAll(" #Wounds\\ and\\ injuries").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Others").checked) {
-      document.querySelectorAll(" #Anaesthesia,#Behaviour\\ and\\ behaviour\\ mechanisms,#Benign\\ tumours,#Biliary\\ cancer,#Bone\\ cancer,#Breast\\ cancer,#CNS\\ cancer,#Cancer\\ metastases,#Cardiovascular\\ disorders,#Colorectal\\ cancer,#Congenital\\ disorders,#Connective\\ and\\ soft\\ tissue\\ neoplasms,#Connective\\ tissue\\ disorders,#Connective\\ tissue\\ neoplasms,#Cysts,#Diabetes\\ mellitus,#Diabetic\\ complications,#Digestive\\ system\\ disorders,#Drug\\ toxicity,#Ear\\ nose\\ and\\ throat\\ disorders,#Endocrine\\ disorders,#Eye\\ disorders,#Eye\\ neoplasms,#Female\\ urogenital\\ diseases\\ and\\ pregnancy\\ complications,#Gastrointestinal\\ cancer,#Genitourinary\\ disorders,#Germ\\ cell\\ and\\ embryonal\\ neoplasms,#Glandular\\ and\\ epithelial\\ neoplasms,#Haematological\\ disorders,#Haematological\\ malignancies,#Haemoblastosis,#Hair\\ disorders,#Head\\ and\\ neck\\ cancer,#Heart\\ disorders,#Hereditary\\ neoplastic\\ syndromes,#Immunological\\ disorders,#Inborn\\ genetic\\ disorders,#Infections,#Liver\\ cancer").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-      document.querySelectorAll("#Liver\\ disorders,#Lung\\ cancer,#Lymphatic\\ disorders,#Male\\ genital\\ diseases,#Male\\ urogenital\\ diseases,#Malignant\\ thymoma,#Mental\\ disorders,#Mesothelioma,#Metabolic\\ disorders,#Mouth\\ disorders,#Multisystem\\ disorders,#Musculoskeletal\\ disorders,#Nerve\\ tissue\\ neoplasms,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Neurologic\\ manifestations,#Neurological\\ disorders,#Neuromuscular\\ blockade,#Neuromuscular\\ disorders,#Nevi\\ and\\ melanomas,#Nutrition\\ disorders,#Pancreatic\\ cancer,#Pathologic\\ processes,#Pathological\\ conditions\\ or\\ anatomical,#Pathology\\ and\\ biological\\ functions,#Pelvic\\ cancer,#Peripheral\\ nervous\\ system\\ neoplasms,#Peritoneal\\ cancer,#Pigmentation,#Plasmacytoma,#Precancerous\\ conditions,#Respiration\\ disorders,#Respiratory\\ hypersensitivity,#Respiratory\\ tract\\ disorders,#Respiratory\\ tract\\ infections,#Sarcoma,#Sclerosis,#Sedation,#Signs\\ and\\ symptoms,#Signs\\ symptoms\\ and\\ ill-defined\\ conditions").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-      document.querySelectorAll("#Skin\\ and\\ soft\\ tissue\\ infections,#Skin\\ cancer,#Skin\\ disorders,#Solid\\ tumours,#Squamous\\ cell\\ cancer,#Stem\\ cell\\ mobilisation,#Substance-related\\ disorders,#Thyroid\\ cancer,#Urogenital\\ abnormalities,#Urogenital\\ cancer,#Vascular\\ disorders,#Wounds\\ and\\ injuries").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
+if (document.getElementById("Dermatology").checked) {
+document.querySelectorAll(" #Cysts,#Hair\\ disorders,#Immunological\\ disorders,#Infections,#Nevi\\ and\\ melanomas,#Pigmentation,#Skin\\ and\\ soft\\ tissue\\ infections,#Skin\\ cancer,#Skin\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Cardiovascular").checked) {
+document.querySelectorAll(" #Cardiovascular\\ disorders,#Heart\\ disorders,#Immunological\\ disorders,#Infections,#Vascular\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Oncology").checked) {
+document.querySelectorAll(" #Benign\\ tumours,#Biliary\\ cancer,#Bone\\ cancer,#Breast\\ cancer,#CNS\\ cancer,#Cancer\\ metastases,#Colorectal\\ cancer,#Connective\\ and\\ soft\\ tissue\\ neoplasms,#Connective\\ tissue\\ neoplasms,#Drug\\ toxicity,#Eye\\ neoplasms,#Gastrointestinal\\ cancer,#Germ\\ cell\\ and\\ embryonal\\ neoplasms,#Glandular\\ and\\ epithelial\\ neoplasms,#Haematological\\ malignancies,#Head\\ and\\ neck\\ cancer,#Hereditary\\ neoplastic\\ syndromes,#Immunological\\ disorders,#Liver\\ cancer,#Lung\\ cancer,#Malignant\\ thymoma,#Nerve\\ tissue\\ neoplasms,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Nevi\\ and\\ melanomas,#Pancreatic\\ cancer,#Pelvic\\ cancer,#Peripheral\\ nervous\\ system\\ neoplasms,#Peritoneal\\ cancer,#Plasmacytoma,#Precancerous\\ conditions,#Sarcoma,#Skin\\ cancer,#Solid\\ tumours,#Squamous\\ cell\\ cancer,#Thyroid\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Rare Diseases").checked) {
+document.querySelectorAll(" #Congenital\\ disorders,#Germ\\ cell\\ and\\ embryonal\\ neoplasms,#Glandular\\ and\\ epithelial\\ neoplasms,#Hereditary\\ neoplastic\\ syndromes,#Immunological\\ disorders,#Inborn\\ genetic\\ disorders,#Infections,#Mental\\ disorders,#Metabolic\\ disorders,#Pigmentation").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Psychiatry").checked) {
+document.querySelectorAll(" #Behaviour\\ and\\ behaviour\\ mechanisms,#Mental\\ disorders,#Nutrition\\ disorders,#Substance-related\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Psychology").checked) {
+document.querySelectorAll(" #Behaviour\\ and\\ behaviour\\ mechanisms,#Mental\\ disorders,#Nutrition\\ disorders,#Substance-related\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Hepatology").checked) {
+document.querySelectorAll(" #Biliary\\ cancer,#Infections,#Liver\\ cancer,#Liver\\ disorders,#Metabolic\\ disorders,#Pancreatic\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Endocrinology & Metabolic Diseases").checked) {
+document.querySelectorAll(" #Diabetes\\ mellitus,#Diabetic\\ complications,#Endocrine\\ disorders,#Immunological\\ disorders,#Metabolic\\ disorders,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Thyroid\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("ENT").checked) {
+document.querySelectorAll(" #Anaesthesia,#Benign\\ tumours,#Ear\\ nose\\ and\\ throat\\ disorders,#Infections,#Mouth\\ disorders,#Thyroid\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Infectious Diseases").checked) {
+document.querySelectorAll(" #Infections,#Respiratory\\ tract\\ infections").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Respiratory").checked) {
+document.querySelectorAll(" #Infections,#Lung\\ cancer,#Mesothelioma,#Respiration\\ disorders,#Respiratory\\ hypersensitivity,#Respiratory\\ tract\\ disorders,#Respiratory\\ tract\\ infections").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Neurology").checked) {
+document.querySelectorAll(" #CNS\\ cancer,#Infections,#Nerve\\ tissue\\ neoplasms,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Neurologic\\ manifestations,#Neurological\\ disorders,#Neuromuscular\\ blockade,#Neuromuscular\\ disorders,#Peripheral\\ nervous\\ system\\ neoplasms,#Sclerosis").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Urology").checked) {
+document.querySelectorAll(" #CNS\\ cancer,#Genitourinary\\ disorders,#Infections,#Male\\ genital\\ diseases,#Male\\ urogenital\\ diseases,#Urogenital\\ abnormalities,#Urogenital\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Men's Health").checked) {
+document.querySelectorAll(" #Genitourinary\\ disorders,#Infections,#Male\\ genital\\ diseases,#Male\\ urogenital\\ diseases,#Urogenital\\ abnormalities,#Urogenital\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Women's Health").checked) {
+document.querySelectorAll(" #Breast\\ cancer,#Female\\ urogenital\\ diseases\\ and\\ pregnancy\\ complications,#Genitourinary\\ disorders,#Infections,#Pelvic\\ cancer,#Urogenital\\ abnormalities,#Urogenital\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Gastroenterology").checked) {
+document.querySelectorAll(" #Colorectal\\ cancer,#Digestive\\ system\\ disorders,#Infections,#Peritoneal\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Haematology").checked) {
+document.querySelectorAll(" #Haematological\\ disorders,#Haematological\\ malignancies,#Haemoblastosis,#Infections,#Lymphatic\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Soft & Connective Tissue").checked) {
+document.querySelectorAll(" #Connective\\ and\\ soft\\ tissue\\ neoplasms,#Connective\\ tissue\\ disorders,#Connective\\ tissue\\ neoplasms,#Cysts,#Infections,#Lymphatic\\ disorders,#Mesothelioma,#Plasmacytoma,#Sarcoma,#Skin\\ and\\ soft\\ tissue\\ infections").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Ophthalmology").checked) {
+document.querySelectorAll(" #Eye\\ disorders,#Eye\\ neoplasms,#Infections").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Internal Medicine").checked) {
+document.querySelectorAll(" #Infections,#Multisystem\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Musculoskeletal").checked) {
+document.querySelectorAll(" #Bone\\ cancer,#Connective\\ tissue\\ disorders,#Connective\\ tissue\\ neoplasms,#Infections,#Musculoskeletal\\ disorders,#Neuromuscular\\ blockade,#Neuromuscular\\ disorders,#Sarcoma,#Skin\\ and\\ soft\\ tissue\\ infections").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Surgery").checked) {
+document.querySelectorAll(" #Anaesthesia,#Sedation,#Wounds\\ and\\ injuries").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Pain & Analgesia").checked) {
+document.querySelectorAll(" #Anaesthesia,#Sedation").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Toxicology & Poisoning").checked) {
+document.querySelectorAll(" #Drug\\ toxicity,#Substance-related\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Immunology").checked) {
+document.querySelectorAll(" #Drug\\ toxicity,#Immunological\\ disorders,#Lymphatic\\ disorders,#Respiratory\\ hypersensitivity").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Accident & Emergency").checked) {
+document.querySelectorAll(" #Anaesthesia,#Drug\\ toxicity,#Sedation,#Wounds\\ and\\ injuries").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Nutrition & Weight Loss").checked) {
+document.querySelectorAll(" #Nutrition\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Tissue & Regenerative Medicine").checked) {
+document.querySelectorAll(" #Stem\\ cell\\ mobilisation,#Wounds\\ and\\ injuries").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Obstetrics and Gynaecology").checked) {
+document.querySelectorAll(" #Female\\ urogenital\\ diseases\\ and\\ pregnancy\\ complications,#Genitourinary\\ disorders,#Pelvic\\ cancer,#Urogenital\\ abnormalities,#Urogenital\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Orthopedic").checked) {
+document.querySelectorAll(" #Plasmacytoma,#Sarcoma").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Others").checked) {
+document.querySelectorAll(" #Anaesthesia,#Behaviour\\ and\\ behaviour\\ mechanisms,#Benign\\ tumours,#Biliary\\ cancer,#Bone\\ cancer,#Breast\\ cancer,#CNS\\ cancer,#Cancer\\ metastases,#Cardiovascular\\ disorders,#Colorectal\\ cancer,#Congenital\\ disorders,#Connective\\ and\\ soft\\ tissue\\ neoplasms,#Connective\\ tissue\\ disorders,#Connective\\ tissue\\ neoplasms,#Cysts,#Diabetes\\ mellitus,#Diabetic\\ complications,#Digestive\\ system\\ disorders,#Drug\\ toxicity,#Ear\\ nose\\ and\\ throat\\ disorders,#Endocrine\\ disorders,#Eye\\ disorders,#Eye\\ neoplasms,#Female\\ urogenital\\ diseases\\ and\\ pregnancy\\ complications,#Gastrointestinal\\ cancer,#Genitourinary\\ disorders,#Germ\\ cell\\ and\\ embryonal\\ neoplasms,#Glandular\\ and\\ epithelial\\ neoplasms,#Haematological\\ disorders,#Haematological\\ malignancies,#Haemoblastosis,#Hair\\ disorders,#Head\\ and\\ neck\\ cancer,#Heart\\ disorders,#Hereditary\\ neoplastic\\ syndromes,#Immunological\\ disorders,#Inborn\\ genetic\\ disorders,#Infections,#Liver\\ cancer,#Liver\\ disorders,#Lung\\ cancer,#Lymphatic\\ disorders,#Male\\ genital\\ diseases,#Male\\ urogenital\\ diseases,#Malignant\\ thymoma,#Mental\\ disorders,#Mesothelioma,#Metabolic\\ disorders,#Mouth\\ disorders,#Multisystem\\ disorders,#Musculoskeletal\\ disorders,#Nerve\\ tissue\\ neoplasms,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Neurologic\\ manifestations,#Neurological\\ disorders,#Neuromuscular\\ blockade,#Neuromuscular\\ disorders,#Nevi\\ and\\ melanomas,#Nutrition\\ disorders,#Pancreatic\\ cancer,#Pathologic\\ processes,#Pathological\\ conditions|\\ anatomical,#Pathology\\ and\\ biological\\ functions,#Pelvic\\ cancer,#Peripheral\\ nervous\\ system\\ neoplasms,#Peritoneal\\ cancer,#Pigmentation,#Plasmacytoma,#Precancerous\\ conditions,#Respiration\\ disorders,#Respiratory\\ hypersensitivity,#Respiratory\\ tract\\ disorders,#Respiratory\\ tract\\ infections,#Sarcoma,#Sclerosis,#Sedation,#Signs\\ and\\ symptoms,#Signs\\ symptoms\\ and\\ ill-defined\\ conditions,#Skin\\ and\\ soft\\ tissue\\ infections,#Skin\\ cancer,#Skin\\ disorders,#Solid\\ tumours,#Squamous\\ cell\\ cancer,#Stem\\ cell\\ mobilisation,#Substance-related\\ disorders,#Thyroid\\ cancer,#Urogenital\\ abnormalities,#Urogenital\\ cancer,#Vascular\\ disorders,#Wounds\\ and\\ injuries").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Dermatology").checked) {
+document.querySelectorAll(" #Antioxidants,#Chemical\\ modulators,#Scavengers,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Cardiovascular").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Cell\\ modulators,#Cell\\ replacements,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Diagnostic\\ imaging\\ enhancers,#Diuretics,#Hormone\\ modulators,#Hormone\\ replacements,#Inorganic\\ chemical\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Lipid\\ modulators,#Nitric\\ oxide\\ donors,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Receptor\\ inverse\\ agonists,#Scavengers,#Vascular\\ disrupting\\ agents,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Oncology").checked) {
+document.querySelectorAll(" #Alkylating\\ agents,#Amino\\ acid\\ modulators,#Antimetabolites,#Biological\\ factor\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Chemical\\ modulators,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Cytokine\\ stimulants,#Enzyme\\ modulators,#Gene\\ transference,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Glycopeptide\\ modulators,#Glycoprotein\\ modulators,#Immunologic\\ cytotoxicity,#Inorganic\\ chemical\\ modulators,#Ionising\\ radiation\\ emitters,#Macromolecular\\ substance\\ inhibitors,#Macromolecular\\ substance\\ stimulants,#Membrane\\ glycoprotein\\ modulators,#Metabolism-modulators,#Multiprotein\\ complex\\ modulators,#Nucleic\\ acid\\ nucleotide\\ and\\ nucleoside\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Photosensitisers,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Signal\\ transduction\\ pathway\\ modulators,#Tissue\\ replacements,#Vascular\\ disrupting\\ agents,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Rare Diseases").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Blood\\ physiology\\ modulators,#Bone\\ development\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Enzyme\\ modulators,#Enzyme\\ replacements,#Gene\\ transference,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Growth\\ substance\\ modulators,#Haemic\\ and\\ immune\\ system\\ modulators,#Hormone\\ replacements,#Inorganic\\ chemical\\ modulators,#Inorganic\\ chemical\\ replacements,#Lipid\\ modulators,#Macromolecular\\ substance\\ inhibitors,#Macromolecular\\ substance\\ stimulants,#Metabolism-modulators,#Multiprotein\\ complex\\ modulators,#Nucleic\\ acid\\ nucleotide\\ and\\ nucleoside\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Undefined\\ mechanism,#Vascular\\ disrupting\\ agents,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Psychiatry").checked) {
+document.querySelectorAll(" #Central\\ nervous\\ system\\ modulators,#Chemical\\ modulators,#Enzyme\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Microbiome\\ modulators,#Nervous\\ system\\ modulators,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Signal\\ transduction\\ pathway\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Psychology").checked) {
+}
+if (document.getElementById("Hepatology").checked) {
+document.querySelectorAll(" #Antioxidants,#Enzyme\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polymer\\ modulators,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Endocrinology & Metabolic Diseases").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Bone\\ development\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Enzyme\\ modulators,#Enzyme\\ replacements,#Growth\\ substance\\ modulators,#Hormone\\ modulators,#Hormone\\ replacements,#Lipid\\ modulators,#Metabolism-modulators,#Multiprotein\\ complex\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Receptor\\ inverse\\ agonists,#Scavengers,#Steroid\\ modulators,#Testosterone\\ replacements,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("ENT").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Chemical\\ modulators,#Enzyme\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Infectious Diseases").checked) {
+document.querySelectorAll(" #Chemical\\ modulators,#Enzyme\\ modulators,#Nucleic\\ acid\\ nucleotide\\ and\\ nucleoside\\ modulators,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Steroid\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Respiratory").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ transport\\ modulators,#Chemical\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Steroid\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Neurology").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Biological\\ transport\\ modulators,#Cell\\ modulators,#Cell\\ replacements,#Central\\ nervous\\ system\\ modulators,#Chemical\\ modulators,#Diagnostic\\ imaging\\ enhancers,#Enzyme\\ modulators,#Inorganic\\ chemical\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Nervous\\ system\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polymer\\ modulators,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Receptor\\ inverse\\ agonists,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Urology").checked) {
+document.querySelectorAll(" #Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Men's Health").checked) {
+document.querySelectorAll(" #Antioxidants,#Hormone\\ modulators,#Hormone\\ replacements,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Steroid\\ modulators,#Testosterone\\ replacements,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Women's Health").checked) {
+document.querySelectorAll(" #Antioxidants,#Hormone\\ modulators,#Hormone\\ replacements,#Ovarian\\ follicle\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Steroid\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Haematology").checked) {
+document.querySelectorAll(" #Biological\\ factor\\ modulators,#Blood\\ physiology\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Diuretics,#Enzyme\\ modulators,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Haemic\\ and\\ immune\\ system\\ modulators,#Nitric\\ oxide\\ donors,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Platelet\\ aggregation\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Signal\\ transduction\\ pathway\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Soft & Connective Tissue").checked) {
+document.querySelectorAll(" #Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Chemical\\ modulators,#Enzyme\\ modulators,#Peptide\\ modulators,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Tissue\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Ophthalmology").checked) {
+document.querySelectorAll(" #Enzyme\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Internal Medicine").checked) {
+}
+if (document.getElementById("Musculoskeletal").checked) {
+document.querySelectorAll(" #Bone\\ development\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ modulators,#Polymer\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Steroid\\ modulators,#Testosterone\\ replacements,#Tissue\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Surgery").checked) {
+document.querySelectorAll(" #Blood\\ physiology\\ modulators,#Diagnostic\\ imaging\\ enhancers,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Platelet\\ aggregation\\ modulators,#Tissue\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Pain & Analgesia").checked) {
+document.querySelectorAll(" #Biological\\ factor\\ modulators,#Biological\\ transport\\ modulators,#Chemical\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Nervous\\ system\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Peptide\\ modulators,#Polysaccharide\\ modulators,#Protein\\ modulators,#Receptor\\ inverse\\ agonists,#Signal\\ transduction\\ pathway\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Toxicology & Poisoning").checked) {
+document.querySelectorAll(" #Binding\\ agents,#Biological\\ factor\\ modulators,#Enzyme\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Immunology").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Chemical\\ modulators,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Cytokine\\ stimulants,#Enzyme\\ modulators,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Glycopeptide\\ modulators,#Glycoprotein\\ modulators,#Haemic\\ and\\ immune\\ system\\ modulators,#Immunologic\\ cytotoxicity,#Inorganic\\ chemical\\ modulators,#Lipid\\ modulators,#Membrane\\ glycoprotein\\ modulators,#Multiprotein\\ complex\\ modulators,#Nitric\\ oxide\\ donors,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Steroid\\ modulators,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Accident & Emergency").checked) {
+document.querySelectorAll(" #Binding\\ agents,#Biological\\ factor\\ modulators,#Blood\\ physiology\\ modulators,#Cell\\ replacements,#Diagnostic\\ imaging\\ enhancers,#Immunologic\\ cytotoxicity,#Platelet\\ aggregation\\ modulators,#Tissue\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Nutrition & Weight Loss").checked) {
+document.querySelectorAll(" #Amino\\ acid\\ modulators,#Antioxidants,#Biological\\ transport\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Enzyme\\ modulators,#Hormone\\ modulators,#Hormone\\ replacements,#Inorganic\\ chemical\\ modulators,#Inorganic\\ chemical\\ replacements,#Lipid\\ modulators,#Metabolism-modulators,#Microbiome\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Tissue & Regenerative Medicine").checked) {
+document.querySelectorAll(" #Biological\\ factor\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Cytokine\\ stimulants,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Signal\\ transduction\\ pathway\\ modulators,#Tissue\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Obstetrics and Gynaecology").checked) {
+document.querySelectorAll(" #Ovarian\\ follicle\\ modulators,#Peptide\\ hormone\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Gastroenterology").checked) {
+document.querySelectorAll(" #Antacids,#Chemical\\ modulators,#Cytokine\\ inhibitors,#Enzyme\\ modulators,#Hormone\\ modulators,#Microbiome\\ modulators,#Protein\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Orthopedic").checked) {
+document.querySelectorAll(" #Biological\\ factor\\ modulators,#Bone\\ development\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Protein\\ modulators,#Protein\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Nephrology").checked) {
+document.querySelectorAll(" #Diuretics,#Hormone\\ modulators,#Hormone\\ replacements,#Protein\\ modulators,#Protein\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Others").checked) {
+document.querySelectorAll(" #Alkylating\\ agents,#Amino\\ acid\\ modulators,#Antacids,#Antimetabolites,#Antioxidants,#Binding\\ agents,#Biological\\ factor\\ modulators,#Biological\\ transport\\ modulators,#Blood\\ physiology\\ modulators,#Bone\\ development\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Central\\ nervous\\ system\\ modulators,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Cytokine\\ stimulants,#Diagnostic\\ imaging\\ enhancers,#Diuretics,#Enzyme\\ modulators,#Enzyme\\ replacements,#Gene\\ transference,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Glycopeptide\\ modulators,#Glycoprotein\\ modulators,#Growth\\ substance\\ modulators,#Haemic\\ and\\ immune\\ system\\ modulators,#Hormone\\ modulators,#Hormone\\ replacements,#Immunologic\\ cytotoxicity,#Inorganic\\ chemical\\ modulators,#Inorganic\\ chemical\\ replacements,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Ionising\\ radiation\\ emitters,#Lipid\\ modulators,#Macromolecular\\ substance\\ inhibitors,#Macromolecular\\ substance\\ stimulants,#Membrane\\ glycoprotein\\ modulators,#Metabolism-modulators,#Microbiome\\ modulators,#Multiprotein\\ complex\\ modulators,#Nervous\\ system\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Nitric\\ oxide\\ donors,#Nucleic\\ acid\\ nucleotide\\ and\\ nucleoside\\ modulators,#Ovarian\\ follicle\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Photosensitisers,#Platelet\\ aggregation\\ modulators,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Receptor\\ inverse\\ agonists,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Steroid\\ modulators,#Testosterone\\ replacements,#Tissue\\ replacements,#Undefined\\ mechanism,#Vascular\\ disrupting\\ agents,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Dermatology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antihistamines,#Antipruritics,#Phytotherapies,#Skin\\ disorder\\ therapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Cardiovascular").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Anticoagulants,#Cardiovascular\\ therapies,#Phytotherapies,#Sclerosants,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Oncology").checked) {
+document.querySelectorAll(" #Adjuvants,#Antidiarrhoeals,#Antihormones,#Antineoplastics,#Chemopreventatives,#Chemoprotectants,#Chemosensitisers,#Immunotherapies,#Phytotherapies,#Radioprotectives,#Radiosensitisers,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Rare Diseases").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Calcium\\ supplements,#Digestion\\ aids,#Eye\\ disorder\\ therapies,#Foot\\ disorder\\ therapies,#Gastrokinetics,#Hormonal\\ replacements,#Immunotherapies,#Obesity\\ therapies,#Phytotherapies,#Sclerosants,#Skin\\ disorder\\ therapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Psychiatry").checked) {
+document.querySelectorAll(" #Drug\\ withdrawal\\ therapies,#Neuroprotectants,#Neuropsychotherapeutics,#Obesity\\ therapies,#Phytotherapies,#Probiotics,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Psychology").checked) {
+}
+if (document.getElementById("Hepatology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antifibrotics,#Choleretics,#Gallstone\\ therapies,#Hepatoprotectants,#Immunotherapies").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Endocrinology & Metabolic Diseases").checked) {
+document.querySelectorAll(" #Anabolic\\ steroids,#Antihormones,#Antihypercalcaemics,#Antihyperglycaemics,#Antihypoglycaemics,#Calcium\\ regulators,#Hormonal\\ replacements,#Immunotherapies,#Insulin\\ sensitisers,#Obesity\\ therapies,#Phytotherapies,#Probiotics,#Traditional\\ medicines,#Uricosurics").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("ENT").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antihistamines,#Antihormones,#Antisecretories,#Antitussives,#Antiulcers,#Cytoprotectives,#Decongestants,#Expectorants,#Mucolytics,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Infectious Diseases").checked) {
+document.querySelectorAll(" #Adjuvants,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antidiarrhoeals,#Antipyretics,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Respiratory").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antiasthmatics,#Antibronchitics,#Antifibrotics,#Antihistamines,#Antitussives,#Bronchodilators,#Decongestants,#Expectorants,#Immunotherapies,#Mucolytics,#Phytotherapies,#Surfactants,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Neurology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Immunotherapies,#Neuroprotectants,#Neuropsychotherapeutics,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Urology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Erectile\\ dysfunction\\ therapies,#Immunotherapies,#Infertility\\ therapies,#Phytotherapies,#Traditional\\ medicines,#Urologics,#Uroprotectives").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Men's Health").checked) {
+document.querySelectorAll(" #Anabolic\\ steroids,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antihormones,#Erectile\\ dysfunction\\ therapies,#Hormonal\\ replacements,#Infertility\\ therapies,#Phytotherapies,#Traditional\\ medicines,#Urologics,#Uroprotectives").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Women's Health").checked) {
+document.querySelectorAll(" #Abortifacients,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antihormones,#Calcium\\ supplements,#Hormonal\\ replacements,#Infertility\\ therapies,#Osteoporosis\\ therapies,#Oxytocics,#Phytotherapies,#Tocolytics,#Traditional\\ medicines,#Urologics,#Uroprotectives").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Haematology").checked) {
+document.querySelectorAll(" #Anticoagulants,#Cardiovascular\\ therapies,#Coagulants,#Immunotherapies,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Soft & Connective Tissue").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antifibrotics,#Antiulcers,#Phytotherapies").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Ophthalmology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Eye\\ disorder\\ therapies,#Phytotherapies").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Internal Medicine").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Musculoskeletal").checked) {
+document.querySelectorAll(" #Anabolic\\ steroids,#Antihypercalcaemics,#Antirheumatics,#Antispasmodics,#Antispastics,#Calcium\\ supplements,#Foot\\ disorder\\ therapies,#Muscle\\ relaxants,#Osteoporosis\\ therapies,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Surgery").checked) {
+document.querySelectorAll(" #Anaesthetics,#Anti-infectives,#Anti-inflammatories,#Anticoagulants,#Coagulants,#Muscle\\ relaxants").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Pain & Analgesia").checked) {
+document.querySelectorAll(" #Anaesthetics,#Antihistamines,#Antispasmodics,#Antispastics,#Muscle\\ relaxants,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Toxicology & Poisoning").checked) {
+document.querySelectorAll(" #Antidotes,#Drug\\ withdrawal\\ therapies,#Hepatoprotectants,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Immunology").checked) {
+document.querySelectorAll(" #Adjuvants,#Antiasthmatics,#Antibronchitics,#Antihistamines,#Antipruritics,#Antipyretics,#Antirheumatics,#Immunotherapies,#Irritable\\ bowel\\ syndrome\\ therapies,#Phytotherapies,#Probiotics,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Accident & Emergency").checked) {
+document.querySelectorAll(" #Anaesthetics,#Antiasthmatics,#Anticoagulants,#Antidotes,#Bronchodilators,#Coagulants,#Drug\\ withdrawal\\ therapies,#Muscle\\ relaxants").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Nutrition & Weight Loss").checked) {
+document.querySelectorAll(" #Anabolic\\ steroids,#Antihypercalcaemics,#Antihyperglycaemics,#Antihypoglycaemics,#Calcium\\ regulators,#Calcium\\ supplements,#Digestion\\ aids,#Hyperphosphataemia\\ therapies,#Insulin\\ sensitisers,#Obesity\\ therapies,#Phytotherapies,#Probiotics,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Tissue & Regenerative Medicine").checked) {
+}
+if (document.getElementById("Obstetrics and Gynaecology").checked) {
+document.querySelectorAll(" #Abortifacients,#Infertility\\ therapies,#Oxytocics,#Tocolytics").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Nephrology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Phytotherapies,#Traditional\\ medicines,#Uricosurics").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Orthopedic").checked) {
+document.querySelectorAll(" #Antirheumatics,#Calcium\\ regulators,#Calcium\\ supplements,#Foot\\ disorder\\ therapies,#Osteoporosis\\ therapies,#Phytotherapies").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Gastroenterology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antidiarrhoeals,#Antihistamines,#Antisecretories,#Antispasmodics,#Antiulcers,#Choleretics,#Cytoprotectives,#Digestion\\ aids,#Gastrokinetics,#Immunotherapies,#Irritable\\ bowel\\ syndrome\\ therapies,#Laxatives,#Mucolytics,#Phytotherapies,#Probiotics,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Others").checked) {
+document.querySelectorAll(" #Abortifacients,#Adjuvants,#Anabolic\\ steroids,#Anaesthetics,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antiasthmatics,#Antibronchitics,#Anticoagulants,#Antidiarrhoeals,#Antidotes,#Antifibrotics,#Antihistamines,#Antihormones,#Antihypercalcaemics,#Antihyperglycaemics,#Antihypoglycaemics,#Antineoplastics,#Antipruritics,#Antipyretics,#Antirheumatics,#Antisecretories,#Antispasmodics,#Antispastics,#Antitussives,#Antiulcers,#Bronchodilators,#Calcium\\ regulators,#Calcium\\ supplements,#Cardiovascular\\ therapies,#Chemopreventatives,#Chemoprotectants,#Chemosensitisers,#Choleretics,#Coagulants,#Cytoprotectives,#Decongestants,#Digestion\\ aids,#Drug\\ withdrawal\\ therapies,#Erectile\\ dysfunction\\ therapies,#Expectorants,#Eye\\ disorder\\ therapies,#Foot\\ disorder\\ therapies,#Gallstone\\ therapies,#Gastrokinetics,#Hepatoprotectants,#Hormonal\\ replacements,#Hyperphosphataemia\\ therapies,#Immunotherapies,#Infertility\\ therapies,#Insulin\\ sensitisers,#Irritable\\ bowel\\ syndrome\\ therapies,#Laxatives,#Mucolytics,#Muscle\\ relaxants,#Neuroprotectants,#Neuropsychotherapeutics,#Obesity\\ therapies,#Osteoporosis\\ therapies,#Oxytocics,#Phytotherapies,#Probiotics,#Radioprotectives,#Radiosensitisers,#Sclerosants,#Skin\\ disorder\\ therapies,#Surfactants,#Tocolytics,#Traditional\\ medicines,#Uricosurics,#Urologics,#Uroprotectives").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
 
-    }
-    if (document.getElementById("Dermatology").checked) {
-      document.querySelectorAll(" #Antioxidants,#Chemical\\ modulators,#Scavengers,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Cardiovascular").checked) {
-      document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Cell\\ modulators,#Cell\\ replacements,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Diagnostic\\ imaging\\ enhancers,#Diuretics,#Hormone\\ modulators,#Hormone\\ replacements,#Inorganic\\ chemical\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Lipid\\ modulators,#Nitric\\ oxide\\ donors,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Receptor\\ inverse\\ agonists,#Scavengers,#Vascular\\ disrupting\\ agents,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Oncology").checked) {
-      document.querySelectorAll(" #Alkylating\\ agents,#Amino\\ acid\\ modulators,#Antimetabolites,#Biological\\ factor\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Chemical\\ modulators,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Cytokine\\ stimulants,#Enzyme\\ modulators,#Gene\\ transference,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Glycopeptide\\ modulators,#Glycoprotein\\ modulators,#Immunologic\\ cytotoxicity,#Inorganic\\ chemical\\ modulators,#Ionising\\ radiation\\ emitters,#Macromolecular\\ substance\\ inhibitors,#Macromolecular\\ substance\\ stimulants,#Membrane\\ glycoprotein\\ modulators,#Metabolism-modulators,#Multiprotein\\ complex\\ modulators,#Nucleic\\ acid\\ nucleotide\\ and\\ nucleoside\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Photosensitisers,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Signal\\ transduction\\ pathway\\ modulators,#Tissue\\ replacements,#Vascular\\ disrupting\\ agents,#Vitamin\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Rare Diseases").checked) {
-      document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Blood\\ physiology\\ modulators,#Bone\\ development\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Enzyme\\ modulators,#Enzyme\\ replacements,#Gene\\ transference,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Growth\\ substance\\ modulators,#Haemic\\ and\\ immune\\ system\\ modulators,#Hormone\\ replacements,#Inorganic\\ chemical\\ modulators,#Inorganic\\ chemical\\ replacements,#Lipid\\ modulators,#Macromolecular\\ substance\\ inhibitors,#Macromolecular\\ substance\\ stimulants,#Metabolism-modulators,#Multiprotein\\ complex\\ modulators,#Nucleic\\ acid\\ nucleotide\\ and\\ nucleoside\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Undefined\\ mechanism,#Vascular\\ disrupting\\ agents,#Vitamin\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Psychiatry").checked) {
-      document.querySelectorAll(" #Central\\ nervous\\ system\\ modulators,#Chemical\\ modulators,#Enzyme\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Microbiome\\ modulators,#Nervous\\ system\\ modulators,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Signal\\ transduction\\ pathway\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Psychology").checked) {
-      document.querySelectorAll(" ").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Hepatology").checked) {
-      document.querySelectorAll(" #Peptide\\ modulators,#Peptide\\ replacements,#Polymer\\ modulators,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Endocrinology & Metabolic Diseases").checked) {
-      document.querySelectorAll(" #Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Enzyme\\ modulators,#Lipid\\ modulators,#Multiprotein\\ complex\\ modulators,#Polysaccharide\\ inhibitors,#Receptor\\ inverse\\ agonists").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("ENT").checked) {
-      document.querySelectorAll(" #Enzyme\\ modulators,#Hormone\\ modulators,#Immunologic\\ cytotoxicity,#Microbiome\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Platelet\\ aggregation\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Tissue\\ replacements,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Infectious Diseases").checked) {
-      document.querySelectorAll(" #Chemical\\ modulators,#Enzyme\\ modulators,#Nucleic\\ acid\\ nucleotide\\ and\\ nucleoside\\ modulators,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Steroid\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Respiratory").checked) {
-      document.querySelectorAll(" #Antioxidants,#Biological\\ transport\\ modulators,#Chemical\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Steroid\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Neurology").checked) {
-      document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Biological\\ transport\\ modulators,#Cell\\ modulators,#Cell\\ replacements,#Central\\ nervous\\ system\\ modulators,#Chemical\\ modulators,#Diagnostic\\ imaging\\ enhancers,#Enzyme\\ modulators,#Inorganic\\ chemical\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Nervous\\ system\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polymer\\ modulators,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Receptor\\ inverse\\ agonists,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators,#Vitamin\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Urology").checked) {
-      document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Biological\\ transport\\ modulators,#Cell\\ modulators,#Cell\\ replacements,#Central\\ nervous\\ system\\ modulators,#Chemical\\ modulators,#Diagnostic\\ imaging\\ enhancers,#Enzyme\\ modulators,#Inorganic\\ chemical\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Nervous\\ system\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polymer\\ modulators,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Receptor\\ inverse\\ agonists,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators,#Vitamin\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Men's Health").checked) {
-      document.querySelectorAll(" #Antioxidants,#Hormone\\ modulators,#Hormone\\ replacements,#Ovarian\\ follicle\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Steroid\\ modulators,#Testosterone\\ replacements,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Women's Health").checked) {
-      document.querySelectorAll(" #Antioxidants,#Hormone\\ modulators,#Hormone\\ replacements,#Ovarian\\ follicle\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Steroid\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Gastoenterology").checked) {
-      document.querySelectorAll(" #Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Hematology").checked) {
-      document.querySelectorAll(" #Biological\\ factor\\ modulators,#Blood\\ physiology\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Diuretics,#Enzyme\\ modulators,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Haemic\\ and\\ immune\\ system\\ modulators,#Nitric\\ oxide\\ donors,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Platelet\\ aggregation\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Signal\\ transduction\\ pathway\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Soft & Connective Tissue").checked) {
-      document.querySelectorAll(" #Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Chemical\\ modulators,#Enzyme\\ modulators,#Peptide\\ modulators,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Tissue\\ replacements").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Opthalmology").checked) {
-      document.querySelectorAll(" #Enzyme\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Internal Medicine").checked) {
-      document.querySelectorAll(" ").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Musculoskeletal").checked) {
-      document.querySelectorAll(" #Bone\\ development\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ modulators,#Polymer\\ modulators,#Protein\\ modulators,#Steroid\\ modulators,#Testosterone\\ replacements,#Tissue\\ replacements").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Surgery").checked) {
-      document.querySelectorAll(" #Blood\\ physiology\\ modulators,#Diagnostic\\ imaging\\ enhancers,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Platelet\\ aggregation\\ modulators,#Tissue\\ replacements").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Pain & Analgesia").checked) {
-      document.querySelectorAll(" #Biological\\ factor\\ modulators,#Biological\\ transport\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Nervous\\ system\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Peptide\\ modulators,#Polysaccharide\\ modulators,#Protein\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Toxicology & Poisoning").checked) {
-      document.querySelectorAll(" #Binding\\ agents,#Biological\\ factor\\ modulators,#Enzyme\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Immunology").checked) {
-      document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Chemical\\ modulators,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Cytokine\\ stimulants,#Enzyme\\ modulators,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Glycopeptide\\ modulators,#Glycoprotein\\ modulators,#Haemic\\ and\\ immune\\ system\\ modulators,#Immunologic\\ cytotoxicity,#Inorganic\\ chemical\\ modulators,#Lipid\\ modulators,#Membrane\\ glycoprotein\\ modulators,#Multiprotein\\ complex\\ modulators,#Nitric\\ oxide\\ donors,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Steroid\\ modulators,#Vitamin\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Accident & Emergency").checked) {
-      document.querySelectorAll(" #Binding\\ agents,#Biological\\ factor\\ modulators,#Blood\\ physiology\\ modulators,#Cell\\ replacements,#Immunologic\\ cytotoxicity,#Platelet\\ aggregation\\ modulators,#Tissue\\ replacements").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Gynaecology").checked) {
-      document.querySelectorAll(" #Ovarian\\ follicle\\ modulators,#Peptide\\ hormone\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Nutrition & Weight Loss").checked) {
-      document.querySelectorAll(" #Antioxidants,#Biological\\ transport\\ modulators,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Enzyme\\ modulators,#Hormone\\ modulators,#Hormone\\ replacements,#Inorganic\\ chemical\\ modulators,#Inorganic\\ chemical\\ replacements,#Lipid\\ modulators,#Microbiome\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Vitamin\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Tissue & Regenerative Medicine").checked) {
-      document.querySelectorAll(" #Biological\\ factor\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Cytokine\\ stimulants,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Signal\\ transduction\\ pathway\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Others").checked) {
-      document.querySelectorAll(" #Alkylating\\ agents,#Amino\\ acid\\ modulators,#Antacids,#Antimetabolites,#Antioxidants,#Binding\\ agents,#Biological\\ factor\\ modulators,#Biological\\ transport\\ modulators,#Blood\\ physiology\\ modulators,#Bone\\ development\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Central\\ nervous\\ system\\ modulators,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Cytokine\\ stimulants,#Diagnostic\\ imaging\\ enhancers,#Diuretics,#Enzyme\\ modulators,#Enzyme\\ replacements,#Gene\\ transference,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Glycopeptide\\ modulators,#Glycoprotein\\ modulators,#Growth\\ substance\\ modulators,#Haemic\\ and\\ immune\\ system\\ modulators,#Hormone\\ modulators,#Hormone\\ replacements,#Immunologic\\ cytotoxicity,#Inorganic\\ chemical\\ modulators,#Inorganic\\ chemical\\ replacements,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Ionising\\ radiation\\ emitters,#Lipid\\ modulators,#Macromolecular\\ substance\\ inhibitors,#Macromolecular\\ substance\\ stimulants,#Membrane\\ glycoprotein\\ modulators,#Metabolism-modulators,#Microbiome\\ modulators,#Multiprotein\\ complex\\ modulators,#Nervous\\ system\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Nitric\\ oxide\\ donors,#Nucleic\\ acid\\ nucleotide\\ and\\ nucleoside\\ modulators,#Ovarian\\ follicle\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Photosensitisers,#Platelet\\ aggregation\\ modulators,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Receptor\\ inverse\\ agonists,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Steroid\\ modulators,#Testosterone\\ replacements,#Tissue\\ replacements,#Undefined\\ mechanism,#Vascular\\ disrupting\\ agents,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators,#Vitamin\\ modulators").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Dermatology").checked) {
-      document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antihistamines,#Antipruritics,#Immunotherapies,#Phytotherapies,#Skin\\ disorder\\ therapies,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Cardiovascular").checked) {
-      document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Anticoagulants,#Cardiovascular\\ therapies,#Phytotherapies,#Sclerosants,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Oncology").checked) {
-      document.querySelectorAll(" #Adjuvants,#Antidiarrhoeals,#Antihormones,#Antineoplastics,#Chemopreventatives,#Chemoprotectants,#Chemosensitisers,#Immunotherapies,#Phytotherapies,#Radioprotectives,#Radiosensitisers,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Rare Diseases").checked) {
-      document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Calcium\\ supplements,#Digestion\\ aids,#Eye\\ disorder\\ therapies,#Foot\\ disorder\\ therapies,#Gastrokinetics,#Hormonal\\ replacements,#Immunotherapies,#Obesity\\ therapies,#Phytotherapies,#Sclerosants,#Skin\\ disorder\\ therapies,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Psychiatry").checked) {
-      document.querySelectorAll(" #Neuroprotectants,#Neuropsychotherapeutics,#Obesity\\ therapies,#Phytotherapies,#Probiotics,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Psychology").checked) {
-      document.querySelectorAll(" ").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Hepatology").checked) {
-      document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antifibrotics,#Choleretics,#Gallstone\\ therapies,#Hepatoprotectants,#Immunotherapies").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Endocrinology & Metabolic Diseases").checked) {
-      document.querySelectorAll(" #Immunotherapies,#Phytotherapies,#Probiotics,#Traditional\\ medicines,#Uricosurics").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("ENT").checked) {
-      document.querySelectorAll(" #Anaesthetics,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antiasthmatics,#Anticoagulants,#Antidiarrhoeals,#Antidotes,#Antihistamines,#Antihormones,#Antisecretories,#Antispasmodics,#Antitussives,#Antiulcers,#Bronchodilators,#Choleretics,#Coagulants,#Cytoprotectives,#Decongestants,#Digestion\\ aids,#Drug\\ withdrawal\\ therapies,#Expectorants,#Gastrokinetics,#Immunotherapies,#Irritable\\ bowel\\ syndrome\\ therapies,#Laxatives,#Mucolytics,#Muscle\\ relaxants,#Phytotherapies,#Probiotics,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Infectious Diseases").checked) {
-      document.querySelectorAll(" #Adjuvants,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antidiarrhoeals,#Antipyretics,#Phytotherapies,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Respiratory").checked) {
-      document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antiasthmatics,#Antibronchitics,#Antifibrotics,#Antihistamines,#Antitussives,#Bronchodilators,#Decongestants,#Expectorants,#Immunotherapies,#Mucolytics,#Phytotherapies,#Surfactants,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Neurology").checked) {
-      document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Immunotherapies,#Neuroprotectants,#Neuropsychotherapeutics,#Phytotherapies,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Urology").checked) {
-      document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Erectile\\ dysfunction\\ therapies,#Immunotherapies,#Infertility\\ therapies,#Neuroprotectants,#Neuropsychotherapeutics,#Phytotherapies,#Traditional\\ medicines,#Urologics,#Uroprotectives").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Men's Health").checked) {
-      document.querySelectorAll(" #Abortifacients,#Anabolic\\ steroids,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antihormones,#Calcium\\ supplements,#Erectile\\ dysfunction\\ therapies,#Hormonal\\ replacements,#Infertility\\ therapies,#Osteoporosis\\ therapies,#Oxytocics,#Phytotherapies,#Tocolytics,#Traditional\\ medicines,#Urologics,#Uroprotectives").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Women's Health").checked) {
-      document.querySelectorAll(" #Abortifacients,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antihormones,#Calcium\\ supplements,#Hormonal\\ replacements,#Infertility\\ therapies,#Osteoporosis\\ therapies,#Oxytocics,#Phytotherapies,#Tocolytics,#Traditional\\ medicines,#Urologics,#Uroprotectives").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Gastoenterology").checked) {
-      document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Phytotherapies,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Hematology").checked) {
-      document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Phytotherapies,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Soft & Connective Tissue").checked) {
-      document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antifibrotics,#Antiulcers,#Phytotherapies").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Opthalmology").checked) {
-      document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Eye\\ disorder\\ therapies,#Phytotherapies").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Internal Medicine").checked) {
-      document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Musculoskeletal").checked) {
-      document.querySelectorAll(" #Anabolic\\ steroids,#Antihypercalcaemics,#Antirheumatics,#Antispasmodics,#Antispastics,#Calcium\\ supplements,#Foot\\ disorder\\ therapies,#Muscle\\ relaxants,#Osteoporosis\\ therapies,#Phytotherapies,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Surgery").checked) {
-      document.querySelectorAll(" #Anaesthetics,#Anti-infectives,#Anti-inflammatories,#Anticoagulants,#Coagulants,#Muscle\\ relaxants").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Pain & Analgesia").checked) {
-      document.querySelectorAll(" #Anaesthetics,#Antihistamines,#Antispasmodics,#Antispastics,#Muscle\\ relaxants,#Phytotherapies,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Toxicology & Poisoning").checked) {
-      document.querySelectorAll(" #Drug\\ withdrawal\\ therapies,#Hepatoprotectants,#Phytotherapies,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Immunology").checked) {
-      document.querySelectorAll(" #Adjuvants,#Antiasthmatics,#Antibronchitics,#Antihistamines,#Antipruritics,#Antipyretics,#Antirheumatics,#Immunotherapies,#Irritable\\ bowel\\ syndrome\\ therapies,#Phytotherapies,#Probiotics,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Accident & Emergency").checked) {
-      document.querySelectorAll(" #Anaesthetics,#Antiasthmatics,#Anticoagulants,#Antidotes,#Bronchodilators,#Coagulants,#Drug\\ withdrawal\\ therapies").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Gynaecology").checked) {
-      document.querySelectorAll(" #Abortifacients,#Infertility\\ therapies,#Oxytocics,#Tocolytics").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Nutrition & Weight Loss").checked) {
-      document.querySelectorAll(" #Anabolic\\ steroids,#Antihypercalcaemics,#Antihyperglycaemics,#Antihypoglycaemics,#Calcium\\ regulators,#Calcium\\ supplements,#Digestion\\ aids,#Hyperphosphataemia\\ therapies,#Insulin\\ sensitisers,#Obesity\\ therapies,#Phytotherapies,#Probiotics,#Traditional\\ medicines").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Tissue & Regenerative Medicine").checked) {
-      document.querySelectorAll(" ").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
-    if (document.getElementById("Others").checked) {
-      document.querySelectorAll(" #Abortifacients,#Adjuvants,#Anabolic\\ steroids,#Anaesthetics,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antiasthmatics,#Antibronchitics,#Anticoagulants,#Antidiarrhoeals,#Antidotes,#Antifibrotics,#Antihistamines,#Antihormones,#Antihypercalcaemics,#Antihyperglycaemics,#Antihypoglycaemics,#Antineoplastics,#Antipruritics,#Antipyretics,#Antirheumatics,#Antisecretories,#Antispasmodics,#Antispastics,#Antitussives,#Antiulcers,#Bronchodilators,#Calcium\\ regulators,#Calcium\\ supplements,#Cardiovascular\\ therapies,#Chemopreventatives,#Chemoprotectants,#Chemosensitisers,#Choleretics,#Coagulants,#Cytoprotectives,#Decongestants,#Digestion\\ aids,#Drug\\ withdrawal\\ therapies,#Erectile\\ dysfunction\\ therapies,#Expectorants,#Eye\\ disorder\\ therapies,#Foot\\ disorder\\ therapies,#Gallstone\\ therapies,#Gastrokinetics,#Hepatoprotectants,#Hormonal\\ replacements,#Hyperphosphataemia\\ therapies,#Immunotherapies,#Infertility\\ therapies,#Insulin\\ sensitisers,#Irritable\\ bowel\\ syndrome\\ therapies,#Laxatives,#Mucolytics,#Muscle\\ relaxants,#Neuroprotectants,#Neuropsychotherapeutics,#Obesity\\ therapies,#Osteoporosis\\ therapies,#Oxytocics,#Phytotherapies,#Probiotics,#Radioprotectives,#Radiosensitisers,#Sclerosants,#Skin\\ disorder\\ therapies,#Surfactants,#Tocolytics,#Traditional\\ medicines,#Uricosurics,#Urologics,#Uroprotectives").forEach(ele => {
-        $('label[for="' + ele.id + '"]').show();
-      })
-    }
+
+
 
     // document.getElementsByClassName("bg")[0].style.backgroundImage = 'linear-gradient(-120deg, #993d00 50%, #303030 50%)';
     // document.getElementsByClassName("bg2")[0].style.backgroundImage = 'linear-gradient(-120deg, #993d00 50%, #303030 50%)';

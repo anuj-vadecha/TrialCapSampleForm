@@ -285,10 +285,9 @@ list=[
 "Urology",
 "Men's Health",
 "Women's Health",
-"Gastoenterology",
-"Hematology",
+"Haematology",
 "Soft & Connective Tissue",
-"Opthalmology",
+"Ophthalmology",
 "Internal Medicine",
 "Musculoskeletal",
 "Surgery",
@@ -296,10 +295,15 @@ list=[
 "Toxicology & Poisoning",
 "Immunology",
 "Accident & Emergency",
-"Gynaecology",
+"Obstetrics and Gynaecology",
 "Nutrition & Weight Loss",
 "Tissue & Regenerative Medicine",
-"Others"
+"Others",
+"Gastroenterology",
+"Orthopedic",
+"Nephrology",
+
+
 ]
 
 
