@@ -743,4 +743,20 @@ function form2() {
     // var elmnt = document.getElementById("form_inputs_2").click();
     // elmnt.scrollIntoView();
   }
+  function myFunction() {
+  console.log("Read more")
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
 

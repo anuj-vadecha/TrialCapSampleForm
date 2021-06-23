@@ -6,9 +6,391 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>UpForm</title><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700'>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+<!--    <link rel="stylesheet" href="./style.css">-->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* PAGE & INPUT STYLING */
+.next_input {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  font-size: 2em;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1;
+  bottom: 10%;
+  right: 4%;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+input.largerCheckbox {
+	width: 30px;
+	height: 30px;
+}
+.terms_conditions label {
+  display: block;
+  padding-right: 10px;
+  padding-left: 22px;
+  text-indent: -22px;
+}
+.terms_conditions input {
+  vertical-align: middle;
+}
+.terms_conditions label span {
+  vertical-align: middle;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 0.5rem;
+}
+.grid >label span{
+  display: none;
+}
+.grid > label {
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+}
+.grid > label::before {
+  /*content: '';*/
+  display: block;
+  padding-bottom: 100%;
+  grid-area: 1/1/2/2;
+}
 
+.grid > div label {
+  width: 100%;
+  grid-area: 1/1/2/2;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  grid-gap: 0.75rem; /* To define the gap between rows/columns */
+  gap: 0.75rem;
+  padding: 0.75rem;
+  color: #fff;
+}
+
+.card {
+  /* This will come in handy later to center the contents */
+  position: relative;
+}
+
+.card:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.card .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.75rem;
+  background-color: #474b4f;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #000e7a 50%, #303030 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+h1 {
+  font-family:poppins;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+#rangeValue {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 6em;
+  color: white;
+  font-weight: 400;
+}
+
+body {
+  background: #000c60;
+  color: #FFF;
+}
+
+#question_label{
+  background-color: white;
+  color: black;
+  margin-right: 2px
+}
+
+.question_label{
+  background-color: white;
+  color: black;
+  margin-right: 2px
+}
+
+.btn {
+
+  white-space: normal;
+  word-wrap: break-word;
+  border: 1px solid #808080;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-transition: background 600ms ease, color 600ms ease;
+  transition: background 600ms ease, color 600ms ease;
+
+}
+
+.square{
+  /*vertical-align: middle;*/
+  /*text-align: center;*/
+  /*height: 100px;*/
+  /*width: 150px;*/
+  /*white-space: normal;*/
+  /*word-wrap: break-word;*/
+}
+
+.btn span {
+  border: 1px solid #808080;
+  display: inline-block;
+  padding: 1px 6px;
+  font-size: 12px;
+  border-radius: 5px;
+  vertical-align: middle;
+  text-align: center;
+  margin-top: -5px;
+}
+
+input[type="radio"].toggle {
+  display: none;
+}
+input[type="radio"].toggle + label {
+  cursor: pointer;
+  min-width: 80px;
+}
+input[type="radio"].toggle + label:hover {
+  background: none;
+  color: #FFF;
+}
+input[type="radio"].toggle + label:after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-transition: left 100ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: left 100ms cubic-bezier(0.77, 0, 0.175, 1);
+  /*width: 100%;*/
+  z-index: -1;
+}
+input[type="radio"].toggle.toggle-left + label {
+}
+input[type="radio"].toggle.toggle-left + label:after {
+  left: 100%;
+}
+input[type="radio"].toggle.toggle-right + label {
+  margin-left: 10px;
+}
+input[type="radio"].toggle.toggle-right + label:after {
+  left: -100%;
+}
+input[type="radio"].toggle:checked + label {
+  background: #FFF;
+  cursor: default;
+  color: #000;
+}
+input[type="checkbox"].toggle:checked + label {
+  background: #FFF;
+  cursor: default;
+  color: #000;
+}
+input[type="radio"].toggle:checked + label:after {
+  left: 0;
+}
+/* ENDS */
+
+/* UPFORM STYLE STARTS*/
+.upform input:focus, select:focus, textarea:focus, button:focus {
+  outline: none;
+  border-color: blue !important;
+}
+.upform input, select, textarea {
+  background-color: #000 !important;
+  color: #FFF;
+}
+.upform {
+  font-family: 'Poppins', sans-serif;
+  -webkit-touch-callout: initial; /* iOS Safari */
+  -webkit-user-select: initial; /* Safari */
+  -khtml-user-select: initial; /* Konqueror HTML */
+  -moz-user-select: initial; /* Firefox */
+  -ms-user-select: initial; /* Internet Explorer/Edge */
+  user-select: initial; /* Non-prefixed version, currently
+		            supported by Chrome and Opera */
+  max-width: 900px;
+  margin: 300px auto;
+  margin-bottom: 500px;
+  padding: 0 20px;
+}
+
+.upform .upform-main {
+}
+.upform .upform-main .input-block {
+  padding: 30px 0;
+  opacity: 0.25;
+  cursor: default;
+}
+.upform .upform-main .input-block .label {
+  display: block;
+  font-size: 1.1em;
+  line-height: 30px;
+}
+.upform .upform-main .input-block .input-control {
+  margin: 20px 0;
+}
+.upform .upform-main .input-block .input-control input[type=text] {
+  border: none;
+  outline-width: 0;
+  border-bottom: 2px solid #CCC;
+  width: 100%;
+  font-size: 35px;
+  padding-bottom: 10px;
+}
+
+
+.upform .upform-main .input-block.active {
+  opacity: 1;
+}
+
+.upform .upform-footer {
+  margin-top: 60px;
+}
+
+.upform .upform-footer .btn {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px 20px;
+}
+
+/*label[name="Indications"] {*/
+/*  display: None;*/
+/*}*/
+/* UPFORM STYLE ENDS*/
+
+    </style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -37,7 +419,7 @@
           <input name="name" type="text" class="required" autocomplete="off">
         </div>
       </div>
-    <div class="input-block text-block">
+      <div class="input-block text-block">
         <div class="label">Email address</div>
         <div class="input-control">
           <input name="email" type="text" class="required" autocomplete="off">
@@ -412,7 +794,7 @@
         </div>
         <div class="thankyou_message" style="display:none;">
           <h2><em>Thanks you</em> for your submission !
-            We will get back to you soon! In case of any questions please contact us at ***@email.com</h2>
+            We will get back to you soon! In case of any questions please contact us at <img style="width: 60%" src="supportEmail.png"> </h2>
         </div>
         </div>
 <!--        <div class="bg"></div>-->
@@ -420,11 +802,63 @@
 <!--        <div class="bg bg3"></div>-->
     <div class="upform-footer">
 
-        <div id="terms_conditions" class ="terms_conditions"  style="padding:50px;border: 1px solid white;padding-bottom: 50px;display: none">
+        <div id="terms_conditions" class ="terms_conditions"  style="padding:50px;border: 1px solid white;padding-bottom: 50px;display: none;">
                 <h4 style="padding-bottom: 10px">Privacy Policy and Declaration of Consent</h4>
             <div style="padding-bottom: 20px">
                 <span style="font-size: large;">
-                    By submitting this form, you hereby agree and consent to your personal data which you provide to TrialCap Pte. Ltd. (“TrialCap”) in this form being processed, collected, used, disclosed, stored and/or retained by TrialCap and its members, officers, employees, agents, representatives and sub-contractors for the conduct of research, analysis and development activities (including but not limited to data analytics, surveys and/or profiling) to enhance TrialCap’s operations, as well as for reference and archival purposes.</span></div>
+                    By submitting this form, you hereby agree and consent to your personal data which you provide to TrialCap Pte. Ltd. (“TrialCap”) in this form being processed, collected, used, disclosed, stored and/or retained by TrialCap and its members, officers, employees, agents, representatives and sub-contractors for the conduct of research, analysis and development activities (including but not limited to data analytics, surveys and/or profiling) to enhance TrialCap’s operations, as well as for reference and archival purposes.
+                    <span id="dots">...</span>
+                    <span id="more" style="display: none">
+<h4><strong>SPRIM </strong>values the privacy and security of the information you share with us.</h4>
+<p>It is important that you understand how we collect, use, and maintain your information. This Privacy Policy deals with personally identifiable information (referred to as “Data” below) that may be collected by us on our site. This Policy does not apply to other entities that we do not own or control or persons that are not our employees, agents or within our control.</p>
+<p>By using the&nbsp;<strong>SPRIM</strong>&nbsp;website, or using any&nbsp;<strong>SPRIM</strong>&nbsp;services, you are agreeing to the terms of this Privacy Policy.</p>
+<h2>What types of data we collect:</h2>
+<h6><strong>Personal Information</strong></h6>
+<p>While using our website we may ask you to provide us with personally identifiable information. It includes your name, address information, email address and URL, telephone number, account username as well as other, similar information.</p>
+<p>We may use your personal information to respond to your requests, contact you with newsletters or inform you of marketing related events. You may opt out of receiving any, or all, of&nbsp;these communications.</p>
+<p><strong>Such information is only collected from you if you voluntarily submit it to us.</strong></p>
+<h6><strong>Non-Personal Information</strong></h6>
+<p>We gather statistical and other analytical information collected on an aggregate basis of all visitors to our website. This Non-Personal Data comprises information that cannot be used to identify or contact you, such as demographic information regarding, for example, user IP addresses where they have been clipped or anonymised, browser types and other anonymous statistical data involving the use of our website.</p>
+<h2>What purposes your data are used for:</h2>
+<p>With the data stored on our site, we identify you as our customer/subscriber/patron and deliver products/notices and other marketing materials. As a visitor, you aren’t allowed to purchase any product or subscribe to a newsletter or make a comment anonymously. So, these data are the only means to identify you and allow you to make these actions on our site.</p>
+<h2>Service Providers</h2>
+<p>We may employ third party companies and individuals to facilitate our services and to perform service-related services or to assist us in analyzing how our service is used.</p>
+<p>These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+<h4>Google Analytics</h4>
+<p>Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google may use the collected data to contextualize and personalize the ads of its own advertising network. You can opt-out of having made your activity on the Service available to Google Analytics by installing the Google Analytics opt-out browser add-on.</p>
+<h4><strong>Hubspot</strong></h4>
+<p>We use Hubspot to send out emails about marketing tips and upcoming events. Every email has an unsubscribe link so you can opt-out at any time.</p>
+<h4><strong>Hotjar</strong></h4>
+<p>We use Hotjar for collecting and analyzing user behavior data regarding the use of the website.</p>
+<h4>Third party links on our site</h4>
+<p>With regard to any third party links of products and services on our website, we have no responsibility or liability for the content and activities of these linked sites. Third party sites have their own privacy policies.</p>
+<h2>What policy we have for children:</h2>
+<p>We recognize we have a special obligation to protect personal data obtained from children. We do not and will not knowingly collect personal data from any child under 16 without consent from their parent or guardian. If you are a parent or guardian and are concerned about the transfer of personal data about your child, please contact us.</p>
+<h2>Security Of Data:</h2>
+<p>While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee it is absolutely secure.</p>
+<p>If in any case, a breach of data such as loss, alteration, unauthorized disclosure or access, personal data transmission, storage or otherwise processed happens, we will notify you immediately after we become aware of.</p>
+<h2>What our cookies do on your browser:</h2>
+<p><strong>SPRIM </strong>uses cookies to identify and track visitors, their actions on the site, and their website access preferences.&nbsp;<strong>SPRIM</strong> site visitors wishing not to have cookies placed on their browsers should turn off cookies while using&nbsp;<strong>SPRIM</strong>.com.</p>
+<h4><strong>“Do Not Track” Signals</strong></h4>
+<p>Do Not Track (“DNT”) is a preference you can set in your web browser to inform websites that you do not want to be tracked.&nbsp;You can enable or disable Do Not Track by visiting the Preferences or Settings page of your web browser.</p>
+<h2>Your Rights</h2>
+<p>We aim to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data. Whenever made possible, you can update your Personal Data by contacting us to make the required changes.</p>
+<p>If you wish to be informed what Personal Data we hold about you and if you want it to be removed from our systems, please contact us.&nbsp;In certain circumstances, you have the right:</p>
+<ul>
+<li>To access and receive a copy of the Personal Data we hold about you</li>
+<li>To rectify any Personal Data held about you that is inaccurate</li>
+<li>To request the deletion of Personal Data held about you</li>
+</ul>
+<p>You have the right to data portability for the information you provide to us.&nbsp;You can request to obtain a copy of your Personal Data in a commonly used electronic format so that you can manage and move it.</p>
+<h2>Changes To This Privacy Policy</h2>
+<p>We may update our Privacy Policy from time to time.&nbsp;You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+                    </span>
+             <btn onclick="myFunction()" class="btn btn-md" id="myBtn">Read more</btn>
+                </span>
+            </div>
             <label><input id="agree" style=""  name="terms_conditions" type="checkbox" class="largerCheckbox" name="checkBox"><span style="padding-left: 10px">I Agree</span></label>
             <button id="submit" style="" type="submit"  class="btn btn-primary btn-lg">Submit</button>
         </div>
@@ -434,9 +868,720 @@
 
 
 </div>
-<script data-cfasync="false" src="form-submission-handler.js"></script>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js'></script><script  src="./script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js'></script>
 
+<script>
+    (function() {
+  // get all data in form and return object
+  function getFormData(form) {
+    var elements = form.elements;
+    var honeypot;
+    var fields = Object.keys(elements).filter(function(k) {
+      if (elements[k].name === "honeypot") {
+        honeypot = elements[k].value;
+        return false;
+      }
+      return true;
+    }).map(function(k) {
+      if(elements[k].name !== undefined) {
+        return elements[k].name;
+      // special case for Edge's html collection
+      }else if(elements[k].length > 0){
+        return elements[k].item(0).name;
+      }
+    }).filter(function(item, pos, self) {
+      return self.indexOf(item) == pos && item;
+    });
+
+    var formData = {};
+    fields.forEach(function(name){
+      var element = elements[name];
+
+      // singular form elements just have one value
+      formData[name] = element.value;
+
+      // when our element has multiple items, get their values
+      if (element.length) {
+        var data = [];
+        for (var i = 0; i < element.length; i++) {
+          var item = element.item(i);
+          if (item.checked || item.selected) {
+            if(item.type==='checkbox') {
+              console.log("pushing data for checkbox")
+              data.push(item.id)
+            }
+            else {
+              data.push(item.value);
+            }
+          }
+        }
+        formData[name] = data.join(': ');
+      }
+    });
+
+    // add form-specific values into the data
+    formData.formDataNameOrder = JSON.stringify(fields);
+    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+    formData.formGoogleSendEmail
+      = form.dataset.email || ""; // no email by default
+
+    return {data: formData, honeypot: honeypot};
+  }
+
+  function handleFormSubmit(event) {
+    // handles form submit without any jquery
+    event.preventDefault();           // we are submitting via xhr below
+    if(!document.getElementById('agree').checked){
+      alert('Please agree to the privacy policy')
+      return
+    }
+    var form = event.target;
+    var formData = getFormData(form);
+    console.log(formData)
+    var data = formData.data;
+    console.log(formData)
+    // If a honeypot field is filled, assume it was done so by a spam bot.
+    if (formData.honeypot) {
+      console.log("Honeypot filled hence returning")
+      return false;
+    }
+    disableAllButtons(form);
+    var url = form.action;
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url);
+    // xhr.withCredentials = true;
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          form.reset();
+          var formElements = form.querySelector(".form-elements")
+          if (formElements) {
+            formElements.style.display = "none"; // hide form
+          }
+          var thankYouMessage = form.querySelector(".thankyou_message");
+          if (thankYouMessage) {
+            thankYouMessage.style.display = "block";
+          }
+          document.getElementById('terms_conditions').style.display='none';
+          document.getElementsByClassName("bg")[0].style.backgroundImage = 'linear-gradient(-60deg, #008000 50%, #303030 50%)';
+          document.getElementsByClassName("bg2")[0].style.backgroundImage = 'linear-gradient(-60deg, #008000 50%, #303030 50%)';
+          document.getElementsByClassName("bg3")[0].style.backgroundImage = 'linear-gradient(-60deg, #008000 50%, #303030 50%)';
+          document.getElementById("submit").style.display = 'none';
+
+        }
+    };
+    var encoded = Object.keys(data).map(function(k) {
+        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+    }).join('&');
+    xhr.send(encoded);
+    console.log("Sent form data")
+
+  }
+
+  function loaded() {
+    // bind to the submit event of our form
+    var forms = document.querySelectorAll("form");
+    for (var i = 0; i < forms.length; i++) {
+      forms[i].addEventListener("submit", handleFormSubmit, false);
+    }
+  }
+  document.addEventListener("DOMContentLoaded", loaded, false);
+
+  function disableAllButtons(form) {
+    var buttons = form.querySelectorAll("button");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = true;
+    }
+  }
+  console.log("created")
+})();
+
+
+function validateForm2() {
+  var selected=false;
+  var message=''
+  selected = false
+  document.getElementsByName('Drug class').forEach(ele=>{
+    if(ele.checked) {
+      selected=true
+    }
+  });
+  if(selected!==true) {
+     message+="Please enter atleast one of the Drug classes\n"
+  }
+
+  selected = false
+  document.getElementsByName('Indications').forEach(ele=>{
+    if(ele.checked) {
+      selected=true
+    }
+  });
+  if(selected!==true) {
+     message+="Please enter atleast one of the Drug classes\n"
+  }
+
+
+
+  if (message!=='') {
+    alert(message);
+    return false;
+  }
+  return true
+}
+
+function validateForm() {
+  var selected=false;
+  var message=''
+  document.getElementsByName('name').forEach(ele=>{
+    if(ele.value=='') {
+      message+="Please enter a name\n"
+    }
+  });
+  document.getElementsByName('email').forEach(ele=>{
+    if(ele.value=='') {
+      message+="Please enter an email\n"
+    }
+    else {
+      if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(ele.value)) {
+      } else {
+        message += "Please enter a valid email \n"
+      }
+    }
+  });
+  selected = false
+  document.getElementsByName('phase').forEach(ele=>{
+    if(ele.checked) {
+      selected=true
+    }
+  });
+  if(selected!==true) {
+     message+="Please enter atleast one phase\n"
+  }
+  selected = false
+  document.getElementsByName('trial_design').forEach(ele=>{
+    if(ele.checked) {
+      selected=true
+    }
+  });
+  if(selected!==true) {
+     message+="Please enter atleast one Trial Design\n"
+  }
+
+  selected = false
+  document.getElementsByName('age').forEach(ele=>{
+    if(ele.checked) {
+      selected=true
+    }
+  });
+  if(selected!==true) {
+     message+="Please enter atleast one age group\n"
+  }
+
+  selected = false
+  document.getElementsByName('placebo').forEach(ele=>{
+    if(ele.checked) {
+      selected=true
+    }
+  });
+  if(selected!==true) {
+     message+="Please enter atleast one of placebo options\n"
+  }
+
+  selected = false
+  document.getElementsByName('Therapeutic Area').forEach(ele=>{
+    if(ele.checked) {
+      selected=true
+    }
+  });
+  if(selected!==true) {
+     message+="Please enter atleast one of the Therapeutic areas\n"
+  }
+
+
+  if (message!=='') {
+    alert(message);
+    return false;
+  }
+  return true
+}
+
+
+
+function form2() {
+  if(validateForm()) {
+    document.getElementById('form_inputs_1').style.display = 'None'
+    document.getElementById('form_inputs_2').style.display = 'block'
+    document.getElementById('terms_conditions').style.display = 'block'
+    document.getElementById('submit').style.display = 'block'
+
+    document.getElementsByName("Drug class").forEach(ele => {
+      ele.style.display = 'None'
+      $('label[for="' + ele.id + '"]').hide();
+      ele.checked = false
+    })
+    document.getElementsByName("Indications").forEach(ele => {
+      $('label[for="' + ele.id + '"]').hide();
+      ele.style.display = 'None'
+      ele.checked = false
+    })
+    document.getElementsByName("mechanism_of_action").forEach(ele => {
+      $('label[for="' + ele.id + '"]').hide();
+      ele.style.display = 'None'
+      ele.checked = false
+    })
+if (document.getElementById("Dermatology").checked) {
+document.querySelectorAll(" #Cysts,#Hair\\ disorders,#Immunological\\ disorders,#Infections,#Nevi\\ and\\ melanomas,#Pigmentation,#Skin\\ and\\ soft\\ tissue\\ infections,#Skin\\ cancer,#Skin\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Cardiovascular").checked) {
+document.querySelectorAll(" #Cardiovascular\\ disorders,#Heart\\ disorders,#Immunological\\ disorders,#Infections,#Vascular\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Oncology").checked) {
+document.querySelectorAll(" #Benign\\ tumours,#Biliary\\ cancer,#Bone\\ cancer,#Breast\\ cancer,#CNS\\ cancer,#Cancer\\ metastases,#Colorectal\\ cancer,#Connective\\ and\\ soft\\ tissue\\ neoplasms,#Connective\\ tissue\\ neoplasms,#Drug\\ toxicity,#Eye\\ neoplasms,#Gastrointestinal\\ cancer,#Germ\\ cell\\ and\\ embryonal\\ neoplasms,#Glandular\\ and\\ epithelial\\ neoplasms,#Haematological\\ malignancies,#Head\\ and\\ neck\\ cancer,#Hereditary\\ neoplastic\\ syndromes,#Immunological\\ disorders,#Liver\\ cancer,#Lung\\ cancer,#Malignant\\ thymoma,#Nerve\\ tissue\\ neoplasms,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Nevi\\ and\\ melanomas,#Pancreatic\\ cancer,#Pelvic\\ cancer,#Peripheral\\ nervous\\ system\\ neoplasms,#Peritoneal\\ cancer,#Plasmacytoma,#Precancerous\\ conditions,#Sarcoma,#Skin\\ cancer,#Solid\\ tumours,#Squamous\\ cell\\ cancer,#Thyroid\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Rare Diseases").checked) {
+document.querySelectorAll(" #Congenital\\ disorders,#Germ\\ cell\\ and\\ embryonal\\ neoplasms,#Glandular\\ and\\ epithelial\\ neoplasms,#Hereditary\\ neoplastic\\ syndromes,#Immunological\\ disorders,#Inborn\\ genetic\\ disorders,#Infections,#Mental\\ disorders,#Metabolic\\ disorders,#Pigmentation").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Psychiatry").checked) {
+document.querySelectorAll(" #Behaviour\\ and\\ behaviour\\ mechanisms,#Mental\\ disorders,#Nutrition\\ disorders,#Substance-related\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Psychology").checked) {
+document.querySelectorAll(" #Behaviour\\ and\\ behaviour\\ mechanisms,#Mental\\ disorders,#Nutrition\\ disorders,#Substance-related\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Hepatology").checked) {
+document.querySelectorAll(" #Biliary\\ cancer,#Infections,#Liver\\ cancer,#Liver\\ disorders,#Metabolic\\ disorders,#Pancreatic\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Endocrinology & Metabolic Diseases").checked) {
+document.querySelectorAll(" #Diabetes\\ mellitus,#Diabetic\\ complications,#Endocrine\\ disorders,#Immunological\\ disorders,#Metabolic\\ disorders,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Thyroid\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("ENT").checked) {
+document.querySelectorAll(" #Anaesthesia,#Benign\\ tumours,#Ear\\ nose\\ and\\ throat\\ disorders,#Infections,#Mouth\\ disorders,#Thyroid\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Infectious Diseases").checked) {
+document.querySelectorAll(" #Infections,#Respiratory\\ tract\\ infections").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Respiratory").checked) {
+document.querySelectorAll(" #Infections,#Lung\\ cancer,#Mesothelioma,#Respiration\\ disorders,#Respiratory\\ hypersensitivity,#Respiratory\\ tract\\ disorders,#Respiratory\\ tract\\ infections").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Neurology").checked) {
+document.querySelectorAll(" #CNS\\ cancer,#Infections,#Nerve\\ tissue\\ neoplasms,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Neurologic\\ manifestations,#Neurological\\ disorders,#Neuromuscular\\ blockade,#Neuromuscular\\ disorders,#Peripheral\\ nervous\\ system\\ neoplasms,#Sclerosis").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Urology").checked) {
+document.querySelectorAll(" #CNS\\ cancer,#Genitourinary\\ disorders,#Infections,#Male\\ genital\\ diseases,#Male\\ urogenital\\ diseases,#Urogenital\\ abnormalities,#Urogenital\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Men's Health").checked) {
+document.querySelectorAll(" #Genitourinary\\ disorders,#Infections,#Male\\ genital\\ diseases,#Male\\ urogenital\\ diseases,#Urogenital\\ abnormalities,#Urogenital\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Women's Health").checked) {
+document.querySelectorAll(" #Breast\\ cancer,#Female\\ urogenital\\ diseases\\ and\\ pregnancy\\ complications,#Genitourinary\\ disorders,#Infections,#Pelvic\\ cancer,#Urogenital\\ abnormalities,#Urogenital\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Gastroenterology").checked) {
+document.querySelectorAll(" #Colorectal\\ cancer,#Digestive\\ system\\ disorders,#Infections,#Peritoneal\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Haematology").checked) {
+document.querySelectorAll(" #Haematological\\ disorders,#Haematological\\ malignancies,#Haemoblastosis,#Infections,#Lymphatic\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Soft & Connective Tissue").checked) {
+document.querySelectorAll(" #Connective\\ and\\ soft\\ tissue\\ neoplasms,#Connective\\ tissue\\ disorders,#Connective\\ tissue\\ neoplasms,#Cysts,#Infections,#Lymphatic\\ disorders,#Mesothelioma,#Plasmacytoma,#Sarcoma,#Skin\\ and\\ soft\\ tissue\\ infections").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Ophthalmology").checked) {
+document.querySelectorAll(" #Eye\\ disorders,#Eye\\ neoplasms,#Infections").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Internal Medicine").checked) {
+document.querySelectorAll(" #Infections,#Multisystem\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Musculoskeletal").checked) {
+document.querySelectorAll(" #Bone\\ cancer,#Connective\\ tissue\\ disorders,#Connective\\ tissue\\ neoplasms,#Infections,#Musculoskeletal\\ disorders,#Neuromuscular\\ blockade,#Neuromuscular\\ disorders,#Sarcoma,#Skin\\ and\\ soft\\ tissue\\ infections").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Surgery").checked) {
+document.querySelectorAll(" #Anaesthesia,#Sedation,#Wounds\\ and\\ injuries").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Pain & Analgesia").checked) {
+document.querySelectorAll(" #Anaesthesia,#Sedation").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Toxicology & Poisoning").checked) {
+document.querySelectorAll(" #Drug\\ toxicity,#Substance-related\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Immunology").checked) {
+document.querySelectorAll(" #Drug\\ toxicity,#Immunological\\ disorders,#Lymphatic\\ disorders,#Respiratory\\ hypersensitivity").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Accident & Emergency").checked) {
+document.querySelectorAll(" #Anaesthesia,#Drug\\ toxicity,#Sedation,#Wounds\\ and\\ injuries").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Nutrition & Weight Loss").checked) {
+document.querySelectorAll(" #Nutrition\\ disorders").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Tissue & Regenerative Medicine").checked) {
+document.querySelectorAll(" #Stem\\ cell\\ mobilisation,#Wounds\\ and\\ injuries").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Obstetrics and Gynaecology").checked) {
+document.querySelectorAll(" #Female\\ urogenital\\ diseases\\ and\\ pregnancy\\ complications,#Genitourinary\\ disorders,#Pelvic\\ cancer,#Urogenital\\ abnormalities,#Urogenital\\ cancer").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Orthopedic").checked) {
+document.querySelectorAll(" #Plasmacytoma,#Sarcoma").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Others").checked) {
+document.querySelectorAll(" #Anaesthesia,#Behaviour\\ and\\ behaviour\\ mechanisms,#Benign\\ tumours,#Biliary\\ cancer,#Bone\\ cancer,#Breast\\ cancer,#CNS\\ cancer,#Cancer\\ metastases,#Cardiovascular\\ disorders,#Colorectal\\ cancer,#Congenital\\ disorders,#Connective\\ and\\ soft\\ tissue\\ neoplasms,#Connective\\ tissue\\ disorders,#Connective\\ tissue\\ neoplasms,#Cysts,#Diabetes\\ mellitus,#Diabetic\\ complications,#Digestive\\ system\\ disorders,#Drug\\ toxicity,#Ear\\ nose\\ and\\ throat\\ disorders,#Endocrine\\ disorders,#Eye\\ disorders,#Eye\\ neoplasms,#Female\\ urogenital\\ diseases\\ and\\ pregnancy\\ complications,#Gastrointestinal\\ cancer,#Genitourinary\\ disorders,#Germ\\ cell\\ and\\ embryonal\\ neoplasms,#Glandular\\ and\\ epithelial\\ neoplasms,#Haematological\\ disorders,#Haematological\\ malignancies,#Haemoblastosis,#Hair\\ disorders,#Head\\ and\\ neck\\ cancer,#Heart\\ disorders,#Hereditary\\ neoplastic\\ syndromes,#Immunological\\ disorders,#Inborn\\ genetic\\ disorders,#Infections,#Liver\\ cancer,#Liver\\ disorders,#Lung\\ cancer,#Lymphatic\\ disorders,#Male\\ genital\\ diseases,#Male\\ urogenital\\ diseases,#Malignant\\ thymoma,#Mental\\ disorders,#Mesothelioma,#Metabolic\\ disorders,#Mouth\\ disorders,#Multisystem\\ disorders,#Musculoskeletal\\ disorders,#Nerve\\ tissue\\ neoplasms,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Neurologic\\ manifestations,#Neurological\\ disorders,#Neuromuscular\\ blockade,#Neuromuscular\\ disorders,#Nevi\\ and\\ melanomas,#Nutrition\\ disorders,#Pancreatic\\ cancer,#Pathologic\\ processes,#Pathological\\ conditions\\ or\\ anatomical,#Pathology\\ and\\ biological\\ functions,#Pelvic\\ cancer,#Peripheral\\ nervous\\ system\\ neoplasms,#Peritoneal\\ cancer,#Pigmentation,#Plasmacytoma,#Precancerous\\ conditions,#Respiration\\ disorders,#Respiratory\\ hypersensitivity,#Respiratory\\ tract\\ disorders,#Respiratory\\ tract\\ infections,#Sarcoma,#Sclerosis,#Sedation,#Signs\\ and\\ symptoms,#Signs\\ symptoms\\ and\\ ill-defined\\ conditions,#Skin\\ and\\ soft\\ tissue\\ infections,#Skin\\ cancer,#Skin\\ disorders,#Solid\\ tumours,#Squamous\\ cell\\ cancer,#Stem\\ cell\\ mobilisation,#Substance-related\\ disorders,#Thyroid\\ cancer,#Urogenital\\ abnormalities,#Urogenital\\ cancer,#Vascular\\ disorders,#Wounds\\ and\\ injuries").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Dermatology").checked) {
+document.querySelectorAll(" #Antioxidants,#Chemical\\ modulators,#Scavengers,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Cardiovascular").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Cell\\ modulators,#Cell\\ replacements,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Diagnostic\\ imaging\\ enhancers,#Diuretics,#Hormone\\ modulators,#Hormone\\ replacements,#Inorganic\\ chemical\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Lipid\\ modulators,#Nitric\\ oxide\\ donors,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Receptor\\ inverse\\ agonists,#Scavengers,#Vascular\\ disrupting\\ agents,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Oncology").checked) {
+document.querySelectorAll(" #Alkylating\\ agents,#Amino\\ acid\\ modulators,#Antimetabolites,#Biological\\ factor\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Chemical\\ modulators,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Cytokine\\ stimulants,#Enzyme\\ modulators,#Gene\\ transference,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Glycopeptide\\ modulators,#Glycoprotein\\ modulators,#Immunologic\\ cytotoxicity,#Inorganic\\ chemical\\ modulators,#Ionising\\ radiation\\ emitters,#Macromolecular\\ substance\\ inhibitors,#Macromolecular\\ substance\\ stimulants,#Membrane\\ glycoprotein\\ modulators,#Metabolism-modulators,#Multiprotein\\ complex\\ modulators,#Nucleic\\ acid\\ nucleotide\\ and\\ nucleoside\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Photosensitisers,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Signal\\ transduction\\ pathway\\ modulators,#Tissue\\ replacements,#Vascular\\ disrupting\\ agents,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Rare Diseases").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Blood\\ physiology\\ modulators,#Bone\\ development\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Enzyme\\ modulators,#Enzyme\\ replacements,#Gene\\ transference,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Growth\\ substance\\ modulators,#Haemic\\ and\\ immune\\ system\\ modulators,#Hormone\\ replacements,#Inorganic\\ chemical\\ modulators,#Inorganic\\ chemical\\ replacements,#Lipid\\ modulators,#Macromolecular\\ substance\\ inhibitors,#Macromolecular\\ substance\\ stimulants,#Metabolism-modulators,#Multiprotein\\ complex\\ modulators,#Nucleic\\ acid\\ nucleotide\\ and\\ nucleoside\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Undefined\\ mechanism,#Vascular\\ disrupting\\ agents,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Psychiatry").checked) {
+document.querySelectorAll(" #Central\\ nervous\\ system\\ modulators,#Chemical\\ modulators,#Enzyme\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Microbiome\\ modulators,#Nervous\\ system\\ modulators,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Signal\\ transduction\\ pathway\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Psychology").checked) {
+}
+if (document.getElementById("Hepatology").checked) {
+document.querySelectorAll(" #Antioxidants,#Enzyme\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polymer\\ modulators,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Endocrinology & Metabolic Diseases").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Bone\\ development\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Enzyme\\ modulators,#Enzyme\\ replacements,#Growth\\ substance\\ modulators,#Hormone\\ modulators,#Hormone\\ replacements,#Lipid\\ modulators,#Metabolism-modulators,#Multiprotein\\ complex\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Receptor\\ inverse\\ agonists,#Scavengers,#Steroid\\ modulators,#Testosterone\\ replacements,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("ENT").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Chemical\\ modulators,#Enzyme\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Infectious Diseases").checked) {
+document.querySelectorAll(" #Chemical\\ modulators,#Enzyme\\ modulators,#Nucleic\\ acid\\ nucleotide\\ and\\ nucleoside\\ modulators,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Steroid\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Respiratory").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ transport\\ modulators,#Chemical\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Steroid\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Neurology").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Biological\\ transport\\ modulators,#Cell\\ modulators,#Cell\\ replacements,#Central\\ nervous\\ system\\ modulators,#Chemical\\ modulators,#Diagnostic\\ imaging\\ enhancers,#Enzyme\\ modulators,#Inorganic\\ chemical\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Nervous\\ system\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polymer\\ modulators,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Receptor\\ inverse\\ agonists,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Urology").checked) {
+document.querySelectorAll(" #Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Men's Health").checked) {
+document.querySelectorAll(" #Antioxidants,#Hormone\\ modulators,#Hormone\\ replacements,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Steroid\\ modulators,#Testosterone\\ replacements,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Women's Health").checked) {
+document.querySelectorAll(" #Antioxidants,#Hormone\\ modulators,#Hormone\\ replacements,#Ovarian\\ follicle\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Steroid\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Haematology").checked) {
+document.querySelectorAll(" #Biological\\ factor\\ modulators,#Blood\\ physiology\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Diuretics,#Enzyme\\ modulators,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Haemic\\ and\\ immune\\ system\\ modulators,#Nitric\\ oxide\\ donors,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Platelet\\ aggregation\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Signal\\ transduction\\ pathway\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Soft & Connective Tissue").checked) {
+document.querySelectorAll(" #Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Chemical\\ modulators,#Enzyme\\ modulators,#Peptide\\ modulators,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Tissue\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Ophthalmology").checked) {
+document.querySelectorAll(" #Enzyme\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Internal Medicine").checked) {
+}
+if (document.getElementById("Musculoskeletal").checked) {
+document.querySelectorAll(" #Bone\\ development\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ modulators,#Polymer\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Steroid\\ modulators,#Testosterone\\ replacements,#Tissue\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Surgery").checked) {
+document.querySelectorAll(" #Blood\\ physiology\\ modulators,#Diagnostic\\ imaging\\ enhancers,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Platelet\\ aggregation\\ modulators,#Tissue\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Pain & Analgesia").checked) {
+document.querySelectorAll(" #Biological\\ factor\\ modulators,#Biological\\ transport\\ modulators,#Chemical\\ modulators,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Nervous\\ system\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Peptide\\ modulators,#Polysaccharide\\ modulators,#Protein\\ modulators,#Receptor\\ inverse\\ agonists,#Signal\\ transduction\\ pathway\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Toxicology & Poisoning").checked) {
+document.querySelectorAll(" #Binding\\ agents,#Biological\\ factor\\ modulators,#Enzyme\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Immunology").checked) {
+document.querySelectorAll(" #Antioxidants,#Biological\\ factor\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Chemical\\ modulators,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Cytokine\\ stimulants,#Enzyme\\ modulators,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Glycopeptide\\ modulators,#Glycoprotein\\ modulators,#Haemic\\ and\\ immune\\ system\\ modulators,#Immunologic\\ cytotoxicity,#Inorganic\\ chemical\\ modulators,#Lipid\\ modulators,#Membrane\\ glycoprotein\\ modulators,#Multiprotein\\ complex\\ modulators,#Nitric\\ oxide\\ donors,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Steroid\\ modulators,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Accident & Emergency").checked) {
+document.querySelectorAll(" #Binding\\ agents,#Biological\\ factor\\ modulators,#Blood\\ physiology\\ modulators,#Cell\\ replacements,#Diagnostic\\ imaging\\ enhancers,#Immunologic\\ cytotoxicity,#Platelet\\ aggregation\\ modulators,#Tissue\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Nutrition & Weight Loss").checked) {
+document.querySelectorAll(" #Amino\\ acid\\ modulators,#Antioxidants,#Biological\\ transport\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Enzyme\\ modulators,#Hormone\\ modulators,#Hormone\\ replacements,#Inorganic\\ chemical\\ modulators,#Inorganic\\ chemical\\ replacements,#Lipid\\ modulators,#Metabolism-modulators,#Microbiome\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Scavengers,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Tissue & Regenerative Medicine").checked) {
+document.querySelectorAll(" #Biological\\ factor\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Cytokine\\ stimulants,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Signal\\ transduction\\ pathway\\ modulators,#Tissue\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Obstetrics and Gynaecology").checked) {
+document.querySelectorAll(" #Ovarian\\ follicle\\ modulators,#Peptide\\ hormone\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Gastroenterology").checked) {
+document.querySelectorAll(" #Antacids,#Chemical\\ modulators,#Cytokine\\ inhibitors,#Enzyme\\ modulators,#Hormone\\ modulators,#Microbiome\\ modulators,#Protein\\ modulators,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Orthopedic").checked) {
+document.querySelectorAll(" #Biological\\ factor\\ modulators,#Bone\\ development\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Protein\\ modulators,#Protein\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Nephrology").checked) {
+document.querySelectorAll(" #Diuretics,#Hormone\\ modulators,#Hormone\\ replacements,#Protein\\ modulators,#Protein\\ replacements").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Others").checked) {
+document.querySelectorAll(" #Alkylating\\ agents,#Amino\\ acid\\ modulators,#Antacids,#Antimetabolites,#Antioxidants,#Binding\\ agents,#Biological\\ factor\\ modulators,#Biological\\ transport\\ modulators,#Blood\\ physiology\\ modulators,#Bone\\ development\\ modulators,#Carbohydrate\\ metabolism\\ modulators,#Cell\\ modulators,#Cell\\ physiology\\ modulators,#Cell\\ replacements,#Central\\ nervous\\ system\\ modulators,#Chemical\\ modulators,#Cholesterol\\ absorption\\ inhibitors,#Cholesterol\\ synthesis\\ inhibitors,#Cytokine\\ inhibitors,#Cytokine\\ modulators,#Cytokine\\ stimulants,#Diagnostic\\ imaging\\ enhancers,#Diuretics,#Enzyme\\ modulators,#Enzyme\\ replacements,#Gene\\ transference,#Genetic\\ process\\ modulators,#Genetic\\ structure\\ modulators,#Glycopeptide\\ modulators,#Glycoprotein\\ modulators,#Growth\\ substance\\ modulators,#Haemic\\ and\\ immune\\ system\\ modulators,#Hormone\\ modulators,#Hormone\\ replacements,#Immunologic\\ cytotoxicity,#Inorganic\\ chemical\\ modulators,#Inorganic\\ chemical\\ replacements,#Ion\\ channel\\ agonists,#Ion\\ channel\\ antagonists,#Ion\\ channel\\ modulators,#Ionising\\ radiation\\ emitters,#Lipid\\ modulators,#Macromolecular\\ substance\\ inhibitors,#Macromolecular\\ substance\\ stimulants,#Membrane\\ glycoprotein\\ modulators,#Metabolism-modulators,#Microbiome\\ modulators,#Multiprotein\\ complex\\ modulators,#Nervous\\ system\\ modulators,#Neuromuscular\\ blocking\\ agents,#Neurotransmitter\\ agents,#Neurotransmitter\\ modulators,#Nitric\\ oxide\\ donors,#Nucleic\\ acid\\ nucleotide\\ and\\ nucleoside\\ modulators,#Ovarian\\ follicle\\ modulators,#Peptide\\ hormone\\ modulators,#Peptide\\ modulators,#Peptide\\ replacements,#Photosensitisers,#Platelet\\ aggregation\\ modulators,#Polymer\\ modulators,#Polysaccharide\\ inhibitors,#Polysaccharide\\ modulators,#Protein\\ modulators,#Protein\\ replacements,#Receptor\\ inverse\\ agonists,#Scavengers,#Signal\\ transduction\\ pathway\\ modulators,#Steroid\\ modulators,#Testosterone\\ replacements,#Tissue\\ replacements,#Undefined\\ mechanism,#Vascular\\ disrupting\\ agents,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators,#Vitamin\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Dermatology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antihistamines,#Antipruritics,#Phytotherapies,#Skin\\ disorder\\ therapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Cardiovascular").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Anticoagulants,#Cardiovascular\\ therapies,#Phytotherapies,#Sclerosants,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Oncology").checked) {
+document.querySelectorAll(" #Adjuvants,#Antidiarrhoeals,#Antihormones,#Antineoplastics,#Chemopreventatives,#Chemoprotectants,#Chemosensitisers,#Immunotherapies,#Phytotherapies,#Radioprotectives,#Radiosensitisers,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Rare Diseases").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Calcium\\ supplements,#Digestion\\ aids,#Eye\\ disorder\\ therapies,#Foot\\ disorder\\ therapies,#Gastrokinetics,#Hormonal\\ replacements,#Immunotherapies,#Obesity\\ therapies,#Phytotherapies,#Sclerosants,#Skin\\ disorder\\ therapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Psychiatry").checked) {
+document.querySelectorAll(" #Drug\\ withdrawal\\ therapies,#Neuroprotectants,#Neuropsychotherapeutics,#Obesity\\ therapies,#Phytotherapies,#Probiotics,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Psychology").checked) {
+}
+if (document.getElementById("Hepatology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antifibrotics,#Choleretics,#Gallstone\\ therapies,#Hepatoprotectants,#Immunotherapies").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Endocrinology & Metabolic Diseases").checked) {
+document.querySelectorAll(" #Anabolic\\ steroids,#Antihormones,#Antihypercalcaemics,#Antihyperglycaemics,#Antihypoglycaemics,#Calcium\\ regulators,#Hormonal\\ replacements,#Immunotherapies,#Insulin\\ sensitisers,#Obesity\\ therapies,#Phytotherapies,#Probiotics,#Traditional\\ medicines,#Uricosurics").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("ENT").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antihistamines,#Antihormones,#Antisecretories,#Antitussives,#Antiulcers,#Cytoprotectives,#Decongestants,#Expectorants,#Mucolytics,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Infectious Diseases").checked) {
+document.querySelectorAll(" #Adjuvants,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antidiarrhoeals,#Antipyretics,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Respiratory").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antiasthmatics,#Antibronchitics,#Antifibrotics,#Antihistamines,#Antitussives,#Bronchodilators,#Decongestants,#Expectorants,#Immunotherapies,#Mucolytics,#Phytotherapies,#Surfactants,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Neurology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Immunotherapies,#Neuroprotectants,#Neuropsychotherapeutics,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Urology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Erectile\\ dysfunction\\ therapies,#Immunotherapies,#Infertility\\ therapies,#Phytotherapies,#Traditional\\ medicines,#Urologics,#Uroprotectives").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Men's Health").checked) {
+document.querySelectorAll(" #Anabolic\\ steroids,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antihormones,#Erectile\\ dysfunction\\ therapies,#Hormonal\\ replacements,#Infertility\\ therapies,#Phytotherapies,#Traditional\\ medicines,#Urologics,#Uroprotectives").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Women's Health").checked) {
+document.querySelectorAll(" #Abortifacients,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antihormones,#Calcium\\ supplements,#Hormonal\\ replacements,#Infertility\\ therapies,#Osteoporosis\\ therapies,#Oxytocics,#Phytotherapies,#Tocolytics,#Traditional\\ medicines,#Urologics,#Uroprotectives").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Haematology").checked) {
+document.querySelectorAll(" #Anticoagulants,#Cardiovascular\\ therapies,#Coagulants,#Immunotherapies,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Soft & Connective Tissue").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antifibrotics,#Antiulcers,#Phytotherapies").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Ophthalmology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Eye\\ disorder\\ therapies,#Phytotherapies").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Internal Medicine").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Musculoskeletal").checked) {
+document.querySelectorAll(" #Anabolic\\ steroids,#Antihypercalcaemics,#Antirheumatics,#Antispasmodics,#Antispastics,#Calcium\\ supplements,#Foot\\ disorder\\ therapies,#Muscle\\ relaxants,#Osteoporosis\\ therapies,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Surgery").checked) {
+document.querySelectorAll(" #Anaesthetics,#Anti-infectives,#Anti-inflammatories,#Anticoagulants,#Coagulants,#Muscle\\ relaxants").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Pain & Analgesia").checked) {
+document.querySelectorAll(" #Anaesthetics,#Antihistamines,#Antispasmodics,#Antispastics,#Muscle\\ relaxants,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Toxicology & Poisoning").checked) {
+document.querySelectorAll(" #Antidotes,#Drug\\ withdrawal\\ therapies,#Hepatoprotectants,#Phytotherapies,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Immunology").checked) {
+document.querySelectorAll(" #Adjuvants,#Antiasthmatics,#Antibronchitics,#Antihistamines,#Antipruritics,#Antipyretics,#Antirheumatics,#Immunotherapies,#Irritable\\ bowel\\ syndrome\\ therapies,#Phytotherapies,#Probiotics,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Accident & Emergency").checked) {
+document.querySelectorAll(" #Anaesthetics,#Antiasthmatics,#Anticoagulants,#Antidotes,#Bronchodilators,#Coagulants,#Drug\\ withdrawal\\ therapies,#Muscle\\ relaxants").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Nutrition & Weight Loss").checked) {
+document.querySelectorAll(" #Anabolic\\ steroids,#Antihypercalcaemics,#Antihyperglycaemics,#Antihypoglycaemics,#Calcium\\ regulators,#Calcium\\ supplements,#Digestion\\ aids,#Hyperphosphataemia\\ therapies,#Insulin\\ sensitisers,#Obesity\\ therapies,#Phytotherapies,#Probiotics,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Tissue & Regenerative Medicine").checked) {
+}
+if (document.getElementById("Obstetrics and Gynaecology").checked) {
+document.querySelectorAll(" #Abortifacients,#Infertility\\ therapies,#Oxytocics,#Tocolytics").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Nephrology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Phytotherapies,#Traditional\\ medicines,#Uricosurics").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Orthopedic").checked) {
+document.querySelectorAll(" #Antirheumatics,#Calcium\\ regulators,#Calcium\\ supplements,#Foot\\ disorder\\ therapies,#Osteoporosis\\ therapies,#Phytotherapies").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Gastroenterology").checked) {
+document.querySelectorAll(" #Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antidiarrhoeals,#Antihistamines,#Antisecretories,#Antispasmodics,#Antiulcers,#Choleretics,#Cytoprotectives,#Digestion\\ aids,#Gastrokinetics,#Immunotherapies,#Irritable\\ bowel\\ syndrome\\ therapies,#Laxatives,#Mucolytics,#Phytotherapies,#Probiotics,#Traditional\\ medicines").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+if (document.getElementById("Others").checked) {
+document.querySelectorAll(" #Abortifacients,#Adjuvants,#Anabolic\\ steroids,#Anaesthetics,#Anti-infectives,#Anti-inflammatories,#Antiallergics,#Antiasthmatics,#Antibronchitics,#Anticoagulants,#Antidiarrhoeals,#Antidotes,#Antifibrotics,#Antihistamines,#Antihormones,#Antihypercalcaemics,#Antihyperglycaemics,#Antihypoglycaemics,#Antineoplastics,#Antipruritics,#Antipyretics,#Antirheumatics,#Antisecretories,#Antispasmodics,#Antispastics,#Antitussives,#Antiulcers,#Bronchodilators,#Calcium\\ regulators,#Calcium\\ supplements,#Cardiovascular\\ therapies,#Chemopreventatives,#Chemoprotectants,#Chemosensitisers,#Choleretics,#Coagulants,#Cytoprotectives,#Decongestants,#Digestion\\ aids,#Drug\\ withdrawal\\ therapies,#Erectile\\ dysfunction\\ therapies,#Expectorants,#Eye\\ disorder\\ therapies,#Foot\\ disorder\\ therapies,#Gallstone\\ therapies,#Gastrokinetics,#Hepatoprotectants,#Hormonal\\ replacements,#Hyperphosphataemia\\ therapies,#Immunotherapies,#Infertility\\ therapies,#Insulin\\ sensitisers,#Irritable\\ bowel\\ syndrome\\ therapies,#Laxatives,#Mucolytics,#Muscle\\ relaxants,#Neuroprotectants,#Neuropsychotherapeutics,#Obesity\\ therapies,#Osteoporosis\\ therapies,#Oxytocics,#Phytotherapies,#Probiotics,#Radioprotectives,#Radiosensitisers,#Sclerosants,#Skin\\ disorder\\ therapies,#Surfactants,#Tocolytics,#Traditional\\ medicines,#Uricosurics,#Urologics,#Uroprotectives").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+}
+
+
+
+
+    // document.getElementsByClassName("bg")[0].style.backgroundImage = 'linear-gradient(-120deg, #993d00 50%, #303030 50%)';
+    // document.getElementsByClassName("bg2")[0].style.backgroundImage = 'linear-gradient(-120deg, #993d00 50%, #303030 50%)';
+    // document.getElementsByClassName("bg3")[0].style.backgroundImage = 'linear-gradient(-120deg, #993d00 50%, #303030 50%)';
+    $('html, body').animate({scrollTop: 100}, 'slow');
+  }
+    // var elmnt = document.getElementById("form_inputs_2").click();
+    // elmnt.scrollIntoView();
+  }
+   function random_bg_color() {
+    var x = Math.floor(Math.random() * 256);
+    var y = 100+ Math.floor(Math.random() * 256);
+    var z = 50+ Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+ 	console.log(bgColor);
+    return bgColor
+  }
+
+  function form1() {
+    document.getElementById('form_inputs_1').style.display='block'
+    document.getElementById('form_inputs_2').style.display='None'
+    document.getElementById('submit').style.display='None'
+    document.getElementById('terms_conditions').style.display = 'None'
+    document.getElementById('submit').style.display = 'None'
+    // document.getElementsByClassName("bg")[0].style.backgroundImage = 'linear-gradient(-60deg, #000e7a 50%, #303030 50%)';
+    // document.getElementsByClassName("bg2")[0].style.backgroundImage = 'linear-gradient(-60deg, #000e7a 50%, #303030 50%)';
+    // document.getElementsByClassName("bg3")[0].style.backgroundImage = 'linear-gradient(-60deg, #000e7a 50%, #303030 50%)';
+
+    // $('html, body').animate({scrollTop:100}, 'slow');
+    // var elmnt = document.getElementById("form_inputs_2").click();
+    // elmnt.scrollIntoView();
+  }
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+$.fn.upform = function() {
+  var $this = $(this);
+  var container = $this.find(".upform-main");
+
+  $(document).ready(function() {
+    $(container).find(".input-block").first().click();
+  });
+
+  // $($this).find("form").submit(function() {
+  //   return false;
+  // });
+
+  document.getElementById('understand').addEventListener("click",function (e){
+    moveNext(e.srcElement)
+    rescroll(e.srcElement)
+  })
+
+  $(container)
+    .find(".input-block")
+    .not(".input-block input")
+    .on("click", function() {
+      if(!$(this).hasClass('active')) {
+
+    $(container).find(".input-block input").each(function(e) {
+      $(e).blur();
+    });
+    $(this).addClass("active");
+      }
+     if(!$(this).hasClass("active") && !$(this).hasClass('text-block')) {
+        rescroll(this);
+      }
+    });
+
+
+  $(container)
+    .find(".input-block")
+    .not(".input-block input")
+    .on("focus", function() {
+      if(!$(this).hasClass('active')) {
+
+    $(container).find(".input-block input").each(function(e) {
+      $(e).blur();
+    });
+    $(this).addClass("active");
+      }
+     if(!$(this).hasClass("active") && !$(this).hasClass('text-block')) {
+        rescroll(this);
+      }
+    });
+
+
+
+
+
+  $(container).find(".input-block input").keypress(function(e) {
+    if (e.which == 13) {
+      if ($(this).hasClass("required") && $(this).val() == "") {
+      } else moveNext(this);
+    }
+  });
+
+  $(container).find('.input-block input[type="radio"]').change(function(e) {
+    // moveNext(this);
+  });
+
+  $(window).on("scroll", function() {
+    $(container).find(".input-block").each(function() {
+      var etop = $(this).offset().top;
+      var diff = etop - $(window).scrollTop();
+      if (diff > 100 && diff < 300) {
+        reinitState(this);
+      }
+    });
+  });
+
+  function reinitState(e) {
+    $(container).find(".input-block").removeClass("active");
+
+    $(container).find(".input-block input").each(function() {
+      $(this).blur();
+    });
+    $(e).addClass("active");
+    /*$(e).find('input').focus();*/
+  }
+
+  function rescroll(e) {
+    $(window).scrollTo($(e), 200, {
+      offset: { left: 100, top: -200 },
+      queue: false
+    });
+  }
+
+  function reinit(e) {
+    reinitState(e);
+    rescroll(e);
+  }
+
+  function moveNext(e) {
+    $(e).parent().parent().next().click();
+  }
+
+  function movePrev(e) {
+    $(e).parent().parent().prev().click();
+  }
+};
+
+$(".upform").upform();
+
+
+function rangeSlide(value) {
+      document.getElementById('rangeValue').value = value;
+}
+
+function changeRange(value) {
+      document.getElementById('myRange').value = value;
+}
+
+
+</script>
+<!--<script data-cfasync="false" src="form-submission-handler.js"></script>-->
+<!--<script  src="./script.js"></script>-->
 </body>
 </html>

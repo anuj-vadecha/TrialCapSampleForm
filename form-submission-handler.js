@@ -346,7 +346,7 @@ if (document.getElementById("Orthopedic").checked) {
 document.querySelectorAll(" #Plasmacytoma,#Sarcoma").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
 }
 if (document.getElementById("Others").checked) {
-document.querySelectorAll(" #Anaesthesia,#Behaviour\\ and\\ behaviour\\ mechanisms,#Benign\\ tumours,#Biliary\\ cancer,#Bone\\ cancer,#Breast\\ cancer,#CNS\\ cancer,#Cancer\\ metastases,#Cardiovascular\\ disorders,#Colorectal\\ cancer,#Congenital\\ disorders,#Connective\\ and\\ soft\\ tissue\\ neoplasms,#Connective\\ tissue\\ disorders,#Connective\\ tissue\\ neoplasms,#Cysts,#Diabetes\\ mellitus,#Diabetic\\ complications,#Digestive\\ system\\ disorders,#Drug\\ toxicity,#Ear\\ nose\\ and\\ throat\\ disorders,#Endocrine\\ disorders,#Eye\\ disorders,#Eye\\ neoplasms,#Female\\ urogenital\\ diseases\\ and\\ pregnancy\\ complications,#Gastrointestinal\\ cancer,#Genitourinary\\ disorders,#Germ\\ cell\\ and\\ embryonal\\ neoplasms,#Glandular\\ and\\ epithelial\\ neoplasms,#Haematological\\ disorders,#Haematological\\ malignancies,#Haemoblastosis,#Hair\\ disorders,#Head\\ and\\ neck\\ cancer,#Heart\\ disorders,#Hereditary\\ neoplastic\\ syndromes,#Immunological\\ disorders,#Inborn\\ genetic\\ disorders,#Infections,#Liver\\ cancer,#Liver\\ disorders,#Lung\\ cancer,#Lymphatic\\ disorders,#Male\\ genital\\ diseases,#Male\\ urogenital\\ diseases,#Malignant\\ thymoma,#Mental\\ disorders,#Mesothelioma,#Metabolic\\ disorders,#Mouth\\ disorders,#Multisystem\\ disorders,#Musculoskeletal\\ disorders,#Nerve\\ tissue\\ neoplasms,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Neurologic\\ manifestations,#Neurological\\ disorders,#Neuromuscular\\ blockade,#Neuromuscular\\ disorders,#Nevi\\ and\\ melanomas,#Nutrition\\ disorders,#Pancreatic\\ cancer,#Pathologic\\ processes,#Pathological\\ conditions|\\ anatomical,#Pathology\\ and\\ biological\\ functions,#Pelvic\\ cancer,#Peripheral\\ nervous\\ system\\ neoplasms,#Peritoneal\\ cancer,#Pigmentation,#Plasmacytoma,#Precancerous\\ conditions,#Respiration\\ disorders,#Respiratory\\ hypersensitivity,#Respiratory\\ tract\\ disorders,#Respiratory\\ tract\\ infections,#Sarcoma,#Sclerosis,#Sedation,#Signs\\ and\\ symptoms,#Signs\\ symptoms\\ and\\ ill-defined\\ conditions,#Skin\\ and\\ soft\\ tissue\\ infections,#Skin\\ cancer,#Skin\\ disorders,#Solid\\ tumours,#Squamous\\ cell\\ cancer,#Stem\\ cell\\ mobilisation,#Substance-related\\ disorders,#Thyroid\\ cancer,#Urogenital\\ abnormalities,#Urogenital\\ cancer,#Vascular\\ disorders,#Wounds\\ and\\ injuries").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
+document.querySelectorAll(" #Anaesthesia,#Behaviour\\ and\\ behaviour\\ mechanisms,#Benign\\ tumours,#Biliary\\ cancer,#Bone\\ cancer,#Breast\\ cancer,#CNS\\ cancer,#Cancer\\ metastases,#Cardiovascular\\ disorders,#Colorectal\\ cancer,#Congenital\\ disorders,#Connective\\ and\\ soft\\ tissue\\ neoplasms,#Connective\\ tissue\\ disorders,#Connective\\ tissue\\ neoplasms,#Cysts,#Diabetes\\ mellitus,#Diabetic\\ complications,#Digestive\\ system\\ disorders,#Drug\\ toxicity,#Ear\\ nose\\ and\\ throat\\ disorders,#Endocrine\\ disorders,#Eye\\ disorders,#Eye\\ neoplasms,#Female\\ urogenital\\ diseases\\ and\\ pregnancy\\ complications,#Gastrointestinal\\ cancer,#Genitourinary\\ disorders,#Germ\\ cell\\ and\\ embryonal\\ neoplasms,#Glandular\\ and\\ epithelial\\ neoplasms,#Haematological\\ disorders,#Haematological\\ malignancies,#Haemoblastosis,#Hair\\ disorders,#Head\\ and\\ neck\\ cancer,#Heart\\ disorders,#Hereditary\\ neoplastic\\ syndromes,#Immunological\\ disorders,#Inborn\\ genetic\\ disorders,#Infections,#Liver\\ cancer,#Liver\\ disorders,#Lung\\ cancer,#Lymphatic\\ disorders,#Male\\ genital\\ diseases,#Male\\ urogenital\\ diseases,#Malignant\\ thymoma,#Mental\\ disorders,#Mesothelioma,#Metabolic\\ disorders,#Mouth\\ disorders,#Multisystem\\ disorders,#Musculoskeletal\\ disorders,#Nerve\\ tissue\\ neoplasms,#Neuroendocrine\\ carcinoma,#Neuroendocrine\\ tumours,#Neurologic\\ manifestations,#Neurological\\ disorders,#Neuromuscular\\ blockade,#Neuromuscular\\ disorders,#Nevi\\ and\\ melanomas,#Nutrition\\ disorders,#Pancreatic\\ cancer,#Pathologic\\ processes,#Pathological\\ conditions\\ or\\ anatomical,#Pathology\\ and\\ biological\\ functions,#Pelvic\\ cancer,#Peripheral\\ nervous\\ system\\ neoplasms,#Peritoneal\\ cancer,#Pigmentation,#Plasmacytoma,#Precancerous\\ conditions,#Respiration\\ disorders,#Respiratory\\ hypersensitivity,#Respiratory\\ tract\\ disorders,#Respiratory\\ tract\\ infections,#Sarcoma,#Sclerosis,#Sedation,#Signs\\ and\\ symptoms,#Signs\\ symptoms\\ and\\ ill-defined\\ conditions,#Skin\\ and\\ soft\\ tissue\\ infections,#Skin\\ cancer,#Skin\\ disorders,#Solid\\ tumours,#Squamous\\ cell\\ cancer,#Stem\\ cell\\ mobilisation,#Substance-related\\ disorders,#Thyroid\\ cancer,#Urogenital\\ abnormalities,#Urogenital\\ cancer,#Vascular\\ disorders,#Wounds\\ and\\ injuries").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
 }
 if (document.getElementById("Dermatology").checked) {
 document.querySelectorAll(" #Antioxidants,#Chemical\\ modulators,#Scavengers,#Virus\\ internalisation\\ modulators,#Virus\\ replication\\ modulators").forEach(ele=>{$('label[for="'+ele.id+'"]').show();})
@@ -571,4 +571,20 @@ document.querySelectorAll(" #Abortifacients,#Adjuvants,#Anabolic\\ steroids,#Ana
     // var elmnt = document.getElementById("form_inputs_2").click();
     // elmnt.scrollIntoView();
   }
+function myFunction() {
+  console.log("Read more")
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
 
